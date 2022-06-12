@@ -23,27 +23,39 @@ def txttoexcel(destination):
                 count = len(linelist) #count the number of lines
                 #print (count) #print the number of lines
                 a=0
+                linecount = 0 
+                newrow=[]
+                pdbid, Hetcode, uniprot = "","",""
+                newline = ""
                 for num in range(0, count): #create each line 
                     line = linelist[num] #load each line in variable line
+                    if(line.find(":") != -1):
+                        newline = line.split(":")
+                    else:
+                        newline = line.split(" ")
                     if(line[0] == "#"):
                         splitline = line.split("|") #split lines
                         splitline = splitline[1:]
-                        #print(splitline)
                         worksheet.write_row(a, 0, splitline) #write each line in excel “{PDBid}.xlsx”
                         a+=1
-                    else:
-                        if (line.find(":") != -1):
-                            infoline = line.split(":")
-                            worksheet.write_row(a, 0, infoline)
-                        elif(line.find("=") != -1):
-                            infoline = line.split(">=")
+                        if(a == 1):
+                            for i in range(len(splitline)):
+                                newrow.append("")
+                            newrow[0] = pdbid
+                            newrow[1] = Hetcode
+                            newrow[9] = uniprot
+                            worksheet.write_row(a,0,newrow)
+                            a+=1
+                        #print(splitline)
+                    elif(newline[0]  == "PDB ID"):
+                        pdbid = newline[1].strip("\n").strip(" ")
+                    elif(newline[0] == "HET code"):
+                        Hetcode = newline[1].strip("\n").strip(" ")
+                    elif(newline[0] == "UniProt ID"):
+                        uniprot = newline[1].strip("\n").strip(" ")
+                    elif(line[0] == "-"):
+                        linecount += 1 
 
-                            worksheet.write_row(a, 0, infoline)
-                        else:
-                            infoline = []
-                            infoline.append(line)
-                            worksheet.write_row(a, 0, infoline)
-                        a += 1 
                 workbook.close() #<<<close workbook, important to complete the task
     print("Directory is completed") # feedback about last completed directory that have multiple txt files in it (named in grouplist)
     return finaldest

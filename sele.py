@@ -3,15 +3,35 @@
 import os
 from selenium import webdriver
 import time
-
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 ##import files
 from txtconverter import txttoexcel
 from concat import folderconcat
-from  ppsm import post_possum
+from post_possum import post_possum
 from grouping import grouping
+from align import align
+
+def matrixchecker(High_RMSDs, protein):
+    exist = False
+    for element in High_RMSDs:
+        if protein == element[1]:
+            exist = True
+    return exist
+def eliminatorhelper(prodict, protein, eliminates):
+    for key in prodict:
+        if protein in prodict[key]:
+            prodict[key].remove(protein)
+            eliminates.append(protein)
+    return eliminates
+def allelementsindictionary(prodict):
+    numberofelements = 0
+    for key in prodict:
+        numberofelements += len(prodict[key])
+    return numberofelements
 def chromesetter(chromeDriver ,dest, headless):
     WINDOW_SIZE = "1920,1080"
-    chromeOptions = webdriver.ChromeOptions()
+    chromeOptions = Options()
     prefs = {"download.default_directory" : dest}
     if(headless):
         chromeOptions.add_argument("--headless")
@@ -44,6 +64,8 @@ def inputtaker():
     else:
         dest1 = os.getcwd()
     max_RMSD = input("Please enter maximum RMSD value (Leaving empty means no any limit): ")
+    if(max_RMSD == ""):
+        max_RMSD = "10"
     correctinp = 1
     while(correctinp <= 1):
         cleaninp = input("Do you want to have other ligands in your result? (Whether you want to see other items than yours)(Yes : \"y\", No : \"N\"): ")
@@ -68,80 +90,62 @@ def download_wait(path_to_downloads):
                 dl_wait = True
         seconds += 1
     return seconds
-def PDBconnecter(lenslists, dest, ligand, chromedriver, headless):
+def PDBconnecter(dest, ligand, chromedriver, headless, prodict):
     liste = []
-    liste2 = []
-    coma = ","
-    #print("pdbconnecter")
-    #print(ligand)
+    numtotal =0
     for element in ligand:
-        #print(element)
         browser1 = chromesetter(chromedriver, dest, headless)
         browser1.get("https://www.rcsb.org")
         time.sleep(2)
-        search = browser1.find_element_by_xpath("/html/body/div/div[2]/div/div/div[1]/div[2]/div/div[2]/table/tbody/tr[1]/td[2]/div/input")
+        search = browser1.find_element(By.XPATH,"/html/body/div/div[2]/div/div/div[1]/div[2]/div/div[2]/table/tbody/tr[1]/td[2]/div/input")
         search.send_keys(element)
         time.sleep(1)
-        find = browser1.find_element_by_xpath("/html/body/div/div[2]/div/div/div[1]/div[2]/div/div[2]/table/tbody/tr[1]/td[2]/div/div/div[2]")
+        find = browser1.find_element(By.XPATH,"/html/body/div/div[2]/div/div/div[1]/div[2]/div/div[2]/table/tbody/tr[1]/td[2]/div/div/div[2]")
         find.click()
         time.sleep(1)
-        but = browser1.find_element_by_xpath("/html/body/div/div[3]/div[1]/div[3]/div[2]/input")
+        but = browser1.find_element(By.XPATH,"/html/body/div/div[3]/div[1]/div[3]/div[2]/input")
         but.click()
         time.sleep(1)
-        down = browser1.find_element_by_xpath("/html/body/div/div[3]/div/div/div[3]/div[2]/div[3]/table/tbody/tr/td[2]/div/div[1]/div[3]/div/div[2]/span")
+        down = browser1.find_element(By.XPATH,"/html/body/div/div[3]/div/div/div[3]/div[2]/div[3]/table/tbody/tr/td[2]/div/div[1]/div[3]/div/div[2]/span")
         down.click()
         time.sleep(1)
-        listprot = browser1.find_element_by_tag_name("textarea")
+        listprot = browser1.find_element(By.TAG_NAME,"textarea")
+        liste = []
         if len(liste) == 0:
-            #print("liste==\"\"")
             listetext = listprot.text
-            #print(listetext)
-            if(listetext.find(coma) == -1):
-                #print("not else")
+            if(listetext.find(",") == -1):
                 liste.append(listetext)
             else:
-                #print("else")
                 liste = listetext.split(",")
-            #print(liste)
-            lenslists.append(len(liste))
-            #print(lenslists)
-        else:
-            #print("liste not empty")
-            liste2text = listprot.text
-            if(liste2text.find(coma)== -1):
-                #print("not in coma")
-                if liste2text not in liste:
-                    #print("in if")
-                    liste2.append(liste2text)
-                    liste = liste + liste2 
-                    lenslists.append(len(liste2))
-            else:
-                #print("we are in else")
-                liste2 = liste2text.split(",")
-                not_commons = [item for item in liste2 if item not in liste]
-                #print(not_commons)
-                commons = [item for item in liste2 if item not in not_commons]
-                #print(commons)
-                lenslists.append(len(not_commons))
-                #print(lenslists)
-                liste = liste + not_commons
-                #print(len(liste))
+            for val in prodict.values():
+                for item in val:
+                    if item in liste:
+                        liste.remove(item)
+            numtotal += len(liste)
+            prodict[element] = liste
     browser1.close()
-    return liste
-def eliminator(destination, element, list, max_RMSD):
+    temp = []
+    return prodict
+def eliminator(destination, element, key, max_RMSD, prodict):
     fileObject = open("{}/{}.txt".format(destination, element), "r")
     lines = fileObject.readlines()
     newlines = []
+    exist = False
     somethingtodelete = False
     High_RMSDs = []
     eliminates = []
     for line in lines:
         if (line[0] == "#"):
             row = line.split("|")
+            if(len(row[1]) == 4):
+                protein = row[1]
+                eliminates = eliminatorhelper(prodict, protein, eliminates)
             if(len(row[8]) <= 4):
                 rmsd_value = float(row[8])
                 if(float(rmsd_value) > float(max_RMSD)):
-                    High_RMSDs.append(line)
+                    exist = matrixchecker(High_RMSDs, row[1])
+                    if (not exist):
+                        High_RMSDs.append(row)
                     somethingtodelete = True
                 else:
                     newlines.append(line)
@@ -155,94 +159,90 @@ def eliminator(destination, element, list, max_RMSD):
         for line in newlines:
             fileObject2.write(line)
     return High_RMSDs
-def possumdownloader(ligand, list,lenlist, numelement, destination, chromedriver, headless, max_RMSD):
-    one = True
+def possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD):
     noresultlist = []
-    inputted_pro = 0
-    #print("possum downloader")
     destroot = destination
-    #print(list)
-    if list:
+    High_RMSDs, High_RMSDs2 = [],[]
+    if prodict:
         time.sleep(1)
         done = 0 
         a = 0 
         toc = time.time()
-        lenlistcounter = 0
-        loopcounter = 0
+        eliminates = []
         print("Estimation is calculating...")
-        for element in range(len(list)):  
-            if len(list[element]) == 4 :
-                if ( loopcounter >= lenlist[lenlistcounter]):
-                    lenlistcounter = lenlistcounter + 1
-                    loopcounter = 0
-                destination = destroot + "/" + ligand[lenlistcounter]
-                #print(destination)
-                driver = chromesetter(chromedriver, destination, headless)
-                driver.get("http://possum.cbrc.jp/PoSSuM/search_k.html")
-                time.sleep(1)
-                pdbid = driver.find_element_by_name("params[0]")
-                ligand_loc = driver.find_element_by_name("params[1]")
-                pdbid.send_keys(list[element])
-                #print(ligand[lenlistcounter])
-                ligand_loc.send_keys(ligand[lenlistcounter])
-                loopcounter += 1
-                download = driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/form/table/tbody/tr[11]/td[2]/input[2]")
-                download.click()
-                time.sleep(0.5)
-                submit = driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/form/table/tbody/tr[12]/td/input")
-                submit.click()
-                time.sleep(0.5)
-                done += 1
-                namenotchanged = True
-                #If there is no any result from PoSSuM the algorithm takes so long 
-                secs = download_wait(destination)
-                if namenotchanged:
-                    try:
-                        if (destination +"/Report_PoSSuM.txt"):
-                            filename = destination + "/" + list[element] + ".txt"
-                            os.rename(destination +"/Report_PoSSuM.txt", filename)
-                            namenotchanged = False
-                    except:
-                        noresultlist.append(element)
-                        print("No any result for the " + list[element] + "!")
-                if not namenotchanged and max_RMSD != None:
-                    High_RMSDs = eliminator(destination, list[element], list, max_RMSD)
-                #driver.close()
-                '''
-                if High_RMSDs:
-                    for item in High_RMSDs:
-                        element = item.split("|")
-                        #print(element)
-                        destination = destroot + "/" + ligand[lenlistcounter]
+        for key in prodict:
+            arr = [f for f in os.listdir(destination + "/" + key) if not f.startswith('.')]#os.listdir(folderpath)
+            for element in prodict[key]:
+                if(element+".txt" not in arr):
+                    #print(element)
+                    if len(element) == 4 :
+                        destination = destroot + "/" + key
                         driver = chromesetter(chromedriver, destination, headless)
                         driver.get("http://possum.cbrc.jp/PoSSuM/search_k.html")
                         time.sleep(1)
-                        pdbid = driver.find_element_by_name("params[0]")
-                        ligand_loc = driver.find_element_by_name("params[1]")
-                        pdbid.send_keys(element[1])
-                        #print(ligand[lenlistcounter])
-                        ligand_loc.send_keys(ligand[lenlistcounter])
-                        download = driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/form/table/tbody/tr[11]/td[2]/input[2]")
+                        pdbid = driver.find_element(By.NAME,"params[0]")
+                        ligand_loc = driver.find_element(By.NAME,"params[1]")
+                        pdbid.send_keys(element)
+                        #print(key)
+                        ligand_loc.send_keys(key)
+                        download = driver.find_element(By.XPATH,"/html/body/div/div[2]/div[2]/form/table/tbody/tr[11]/td[2]/input[2]")
                         download.click()
                         time.sleep(0.5)
-                        submit = driver.find_element_by_xpath("/html/body/div/div[2]/div[2]/form/table/tbody/tr[12]/td/input")
+                        submit = driver.find_element(By.NAME,"button")
                         submit.click()
                         time.sleep(0.5)
+                        done += 1
                         namenotchanged = True
+                        secs = download_wait(destination)
                         if namenotchanged:
                             try:
                                 if (destination +"/Report_PoSSuM.txt"):
-                                    filename = destination + "/" + element[1] + ".txt"
+                                    filename = destination + "/" + element + ".txt"
                                     os.rename(destination +"/Report_PoSSuM.txt", filename)
                                     namenotchanged = False
                             except:
                                 noresultlist.append(element)
-                                print("No any result for the " + element[1] + "!")
+                                print("No any result for the " + element + "!")
                         if not namenotchanged and max_RMSD != None:
-                            High_RMSDs2 = eliminator(destination, element[1], list, max_RMSD)
+                            High_RMSDs += eliminator(destination, element, key, max_RMSD, prodict)
+                        driver.close()
+                        if (len(High_RMSDs) != 0):
+                            #print(High_RMSDs)
+                            for item in High_RMSDs:
+                                #print(item)
+                                #destination = destroot + "/" + key
+                                driver = chromesetter(chromedriver, destination, headless)
+                                driver.get("http://possum.cbrc.jp/PoSSuM/search_k.html")
+                                time.sleep(1)
+                                pdbid = driver.find_element(By.NAME,"params[0]")
+                                ligand_loc = driver.find_element(By.NAME,"params[1]")
+                                pdbid.send_keys(item[1])
+                                ligand_loc.send_keys(item[2])
+                                download = driver.find_element(By.XPATH,"/html/body/div/div[2]/div[2]/form/table/tbody/tr[11]/td[2]/input[2]")
+                                download.click()
+                                time.sleep(0.5)
+                                submit = driver.find_element(By.NAME,"button")
+                                submit.click()
+                                time.sleep(0.5)
+                                namenotchanged = True
+                                secs = download_wait(destination)
+                                try:
+                                    if (destination +"/Report_PoSSuM.txt"):
+                                        #print(item[1])
+                                        filename = destination + "/" + item[1] + ".txt"
+                                        os.rename(destination +"/Report_PoSSuM.txt", filename)
+                                        namenotchanged = False
+                                except:
+                                    noresultlist.append(item)
+                                    print("No any result for the " + item[1] + "!")
+                                if not namenotchanged and max_RMSD != None:
+                                    High_RMSDs2 = eliminator(destination, item[1], key, max_RMSD, prodict)
+                else:
+                    done+=1    
                 High_RMSDs = []
-                '''
-                numelement = len(list)
+                eliminates += High_RMSDs2
+                numelement = allelementsindictionary(prodict)
+                #print(numelement)
                 percent = done * 100
                 percent = float(percent) / float(numelement)
                 print("{:.2f}".format(percent) ,"% completed! Download in progress...", )
@@ -256,34 +256,32 @@ def possumdownloader(ligand, list,lenlist, numelement, destination, chromedriver
                     print(f"Estimated time to complete {estimate:0.4f} minutes")
         print("Download completed!")         
     driver.close()
-    return noresultlist, High_RMSDs
+    return noresultlist, High_RMSDs2
 def main():
     #The desired directory needed to be changed. Destination can be found in inputtaker function 
-    ''''
     chromedriver = "/Users/ahmetolcum/Documents/DevSpace/Selenium/chromedriver" #Give the path of the chrome driver for the selenium 
+    prodict = {}
     resultless, lenlist = [], []
     clean = False
     ligand, destination, clean, max_RMSD = inputtaker()
     headless = True
-    prolist = PDBconnecter(lenlist, destination, ligand, chromedriver, headless)
-    totalenght = len(prolist)
-    totalpro = totalenght / 6
-    numpro = len(prolist)
-    resultless, High_RMSDs = possumdownloader(ligand, prolist,lenlist, numpro, destination, chromedriver, headless, max_RMSD)
-    print(High_RMSDs)
-    '''
-    destination = "/Users/ahmetolcum/Downloads/PDBSUM/COA"
-    exceldest = txttoexcel(destination)
+    prodict = PDBconnecter(destination, ligand, chromedriver, headless, prodict)
+    resultless, High_RMSDs = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
+    
+    
+    #print(High_RMSDs)
+    #destination = "/Users/ahmetolcum/Downloads/PDBSUM/COA"
+    destination = txttoexcel(destination)
+    #destination = "/Users/ahmetolcum/Downloads/PDBSUM/COA/ExcelFiles"
+    #ligandstr = "COA"
+    #ligand = ligandstr.split(",")
+    #clean = True
     #concatfolder = folderconcat(exceldest)
-    #print("now post_possum")
-    #resultfiles = post_possum(exceldest)
-    print("now grouping")
+    destination = post_possum(destination, ligand, clean)
+    destination= align(destination)
+    #print("now grouping")
     #grouping(exceldest)
 if __name__ == "__main__":
     main()
 
-############PROBLEMS TO FIX
-'''
--
-- 
-'''
+############PROBLEMS TO FIX##############
