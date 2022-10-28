@@ -2,6 +2,7 @@ from genericpath import exists
 import xlsxwriter
 import os
 def txttoexcel(destination):
+    #print(destination)
     arr = os.listdir(destination) #current directory (directory that txt files found)
     strtxt = ".txt"
     finaldest = destination + "/ExcelFiles"

@@ -205,12 +205,12 @@ def possumdownloader(ligand, prodict, destination, chromedriver, headless, max_R
                                 print("No any result for the " + element + "!")
                         if not namenotchanged and max_RMSD != None:
                             High_RMSDs += eliminator(destination, element, key, max_RMSD, prodict)
-                        driver.close()
+                        #driver.close()
                         if (len(High_RMSDs) != 0):
                             #print(High_RMSDs)
                             for item in High_RMSDs:
                                 #print(item)
-                                #destination = destroot + "/" + key
+                                destination = destroot + "/" + key
                                 driver = chromesetter(chromedriver, destination, headless)
                                 driver.get("http://possum.cbrc.jp/PoSSuM/search_k.html")
                                 time.sleep(1)
@@ -256,7 +256,7 @@ def possumdownloader(ligand, prodict, destination, chromedriver, headless, max_R
                     print(f"Estimated time to complete {estimate:0.4f} minutes")
         print("Download completed!")         
     driver.close()
-    return noresultlist, High_RMSDs2
+    return noresultlist, High_RMSDs2, destination
 def main():
     #The desired directory needed to be changed. Destination can be found in inputtaker function 
     chromedriver = "/Users/ahmetolcum/Documents/DevSpace/Selenium/chromedriver" #Give the path of the chrome driver for the selenium 
@@ -266,7 +266,7 @@ def main():
     ligand, destination, clean, max_RMSD = inputtaker()
     headless = True
     prodict = PDBconnecter(destination, ligand, chromedriver, headless, prodict)
-    resultless, High_RMSDs = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
+    resultless, High_RMSDs, destination = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
     
     
     #print(High_RMSDs)
