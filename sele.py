@@ -263,8 +263,9 @@ def main():
     prodict = {}
     resultless, lenlist = [], []
     clean = False
-    ligand, destination, clean, max_RMSD = inputtaker()
+    #ligand, destination, clean, max_RMSD = inputtaker()
     headless = True
+    """
     prodict = PDBconnecter(destination, ligand, chromedriver, headless, prodict)
     resultless, High_RMSDs, destination = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
     
@@ -278,7 +279,8 @@ def main():
     #clean = True
     #concatfolder = folderconcat(exceldest)
     destination = post_possum(destination, ligand, clean)
-    #destination = "/Users/ahmetolcum/Documents/Sabanci/PURE/PDB-PoSSuM-Automatisation/FOL/ExcelFiles/ResultFiles"
+    """
+    destination = "/Users/ahmetolcum/Documents/Sabanci/PURE/PDB-PoSSuM-Automatisation/FOL/ExcelFiles/ResultFiles"
     destination= align(destination)
     #print("now grouping")
     #grouping(exceldest)
