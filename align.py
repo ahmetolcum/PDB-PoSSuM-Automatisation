@@ -19,6 +19,7 @@ def findseq(id,chain):
   type(soup)
   rows = soup.find('p')
   #print(rows.string)
+  print(id) #protein uniprotta yoksa ne yapalım alignment konusunda?
   fasta = rows.string 
   fas_seq = fasta.split('\n')
   #print(len(fas_seq))
@@ -34,9 +35,11 @@ def align(folderpath):
         os.mkdir(dest)
     except:
         print("Folder exists will be overwritten: Aligned Result Files!")
-    bind_sites=[]
+    
     for item in arr:
-        try:
+            bind_sites=[]
+        #try:
+            print(item)
     #item="1XVT.xlsx" # dosya adını değiştir
             df1= pd.read_excel(join(folderpath, item)) #açılacak dosya adı 
             uniprotID= df1['UniProt ID'].tolist()
@@ -46,7 +49,7 @@ def align(folderpath):
             #print(orig_protein)
             pdbID=df1['PDB ID'].tolist()
             #print(len(pdbID))
-            res = df1['Aligned residues (Ca atoms)\n'].tolist()
+            res = df1['Aligned residues (Ca atoms)'].tolist()
             for k in range(len(pdbID)):
                 stri = ""
                 for i in range(len(orig_protein)):
@@ -62,12 +65,14 @@ def align(folderpath):
                     #print(loc)
                     stri = stri[:loc-1] + aa + stri[loc:]
                 bind_sites.append(stri)
+            
             df1['Binding Site Alignment']=bind_sites[1:]
             w = open(dest + "/" + item.strip(".xlsx") + ".txt", "w",  encoding='utf-8')
             w.write(item.strip(".xlsx")+"\t"+orig_protein+"\n")
             for key in range(len(bind_sites[1:])):
                 w.write(pdbID[key]+"\t"+bind_sites[key+1]+"\n")
             w.close()
-            return dest
-        except:
-            print("Encountered with a problem in alignment for: ", item)
+    
+        #except:
+            #print("Encountered with a problem in alignment for: ", item)
+    return dest

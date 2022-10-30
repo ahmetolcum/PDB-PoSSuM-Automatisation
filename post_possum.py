@@ -222,7 +222,7 @@ def post_possum(folderpath,ligand,clean):
             to_keep= []
             df_list= df.values.tolist()
             to_keep.append(df_list[0])
-            #print(df_list[0])
+            print(df_list[0])
             seen = []
             pdbID.pop(0)
             for element in pdbID:
