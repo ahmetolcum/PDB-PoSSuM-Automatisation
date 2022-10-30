@@ -29,41 +29,45 @@ def findseq(id,chain):
 
 def align(folderpath):
     dest = folderpath+"/ResultFilesAligned"
-    arr = [f for f in os.listdir(folderpath) if not f.startswith('.')]#os.listdir(folderpath)
-    os.mkdir(dest)
+    arr = [f for f in os.listdir(folderpath) if ((not f.startswith('.')) & (f.endswith(".xlsx")))]#os.listdir(folderpath)
+    try:
+        os.mkdir(dest)
+    except:
+        print("Folder exists will be overwritten: Aligned Result Files!")
     bind_sites=[]
     for item in arr:
+        try:
     #item="1XVT.xlsx" # dosya adını değiştir
-        df1= pd.read_excel(join(folderpath, item)) #açılacak dosya adı 
-        uniprotID= df1['UniProt ID'].tolist()
-        print(uniprotID[0])
-        orig_protein = findseq(uniprotID[0],"A")
-        bind_sites.append(orig_protein)
-        #print(orig_protein)
-
-
-        pdbID=df1['PDB ID'].tolist()
-        #print(len(pdbID))
-        res = df1['Aligned residues (Ca atoms)\n'].tolist()
-        for k in range(len(pdbID)):
-            stri = ""
-            for i in range(len(orig_protein)):
-                stri = stri + "-"
-            lst1 = lst1=res[k].split(",")
-            for m in range(len(lst1)):
-                str1 = lst1[m]
-                idx = str1.rfind("_")
-                aa = str1[idx+1]
-                idx_ = str1.find("_")
-                idxline = str1.find("-")
-                loc = int(str1[idx_+2:idxline])
-                #print(loc)
-                stri = stri[:loc-1] + aa + stri[loc:]
-            bind_sites.append(stri)
-        df1['Binding Site Alignment']=bind_sites[1:]
-        w = open(dest + "/" + item.strip(".xlsx") + ".txt", "w",  encoding='utf-8')
-        w.write(item.strip(".xlsx")+"\t"+orig_protein+"\n")
-        for key in range(len(bind_sites[1:])):
-            w.write(pdbID[key]+"\t"+bind_sites[key+1]+"\n")
-        w.close()
-        return dest
+            df1= pd.read_excel(join(folderpath, item)) #açılacak dosya adı 
+            uniprotID= df1['UniProt ID'].tolist()
+            print(uniprotID[0])
+            orig_protein = findseq(uniprotID[0],"A")
+            bind_sites.append(orig_protein)
+            #print(orig_protein)
+            pdbID=df1['PDB ID'].tolist()
+            #print(len(pdbID))
+            res = df1['Aligned residues (Ca atoms)\n'].tolist()
+            for k in range(len(pdbID)):
+                stri = ""
+                for i in range(len(orig_protein)):
+                    stri = stri + "-"
+                lst1 = lst1=res[k].split(",")
+                for m in range(len(lst1)):
+                    str1 = lst1[m]
+                    idx = str1.rfind("_")
+                    aa = str1[idx+1]
+                    idx_ = str1.find("_")
+                    idxline = str1.find("-")
+                    loc = int(str1[idx_+2:idxline])
+                    #print(loc)
+                    stri = stri[:loc-1] + aa + stri[loc:]
+                bind_sites.append(stri)
+            df1['Binding Site Alignment']=bind_sites[1:]
+            w = open(dest + "/" + item.strip(".xlsx") + ".txt", "w",  encoding='utf-8')
+            w.write(item.strip(".xlsx")+"\t"+orig_protein+"\n")
+            for key in range(len(bind_sites[1:])):
+                w.write(pdbID[key]+"\t"+bind_sites[key+1]+"\n")
+            w.close()
+            return dest
+        except:
+            print("Encountered with a problem in alignment for: ", item)

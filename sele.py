@@ -278,6 +278,7 @@ def main():
     #clean = True
     #concatfolder = folderconcat(exceldest)
     destination = post_possum(destination, ligand, clean)
+    #destination = "/Users/ahmetolcum/Documents/Sabanci/PURE/PDB-PoSSuM-Automatisation/FOL/ExcelFiles/ResultFiles"
     destination= align(destination)
     #print("now grouping")
     #grouping(exceldest)
@@ -285,3 +286,6 @@ if __name__ == "__main__":
     main()
 
 ############PROBLEMS TO FIX##############
+"""
+Align.py does not a return any file. 
+"""
