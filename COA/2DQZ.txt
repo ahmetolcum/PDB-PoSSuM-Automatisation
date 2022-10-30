@@ -1,0 +1,24 @@
+----- Summary of query ----------------------------------------
+PDB ID: 2DQZ
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Liver carboxylesterase 1
+UniProt ID: P23141
+UniRef50 ID: P23141
+EC No.: 3.1.1.1(PDB) 3.1.1.13(UniProt) 3.1.1.56(UniProt)
+CATH code: 3.40.50.1820
+SCOPe code: c.69.1.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 4
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|1YAJ|BEZ|L|4380|0.802|0.002164|13|0.29|CES1 protein|P23141|P23141|3.1.1.1(PDB) 3.1.1.13(UniProt) 3.1.1.56(UniProt)|3.40.50.1820|c.69.1.1|C_L3097-L_L97,C_G3142-L_G142,C_G3143-L_G143,C_S3221-L_S221,C_V3254-L_V254,C_L3255-L_L255,C_L3304-L_L304,C_L3318-L_L318,C_L3358-L_L358,C_I3359-L_I359,C_L3363-L_L363,C_F3426-L_F426,C_H3468-L_H468
+#2|1YAH|EEE|B|2|1|0.001008|12|0.16|CES1 protein|P23141|P23141|3.1.1.1(PDB) 3.1.1.13(UniProt) 3.1.1.56(UniProt)|3.40.50.1820|c.69.1.1|C_L3097-B_L97,C_G3142-B_G142,C_G3143-B_G143,C_S3221-B_S221,C_V3254-B_V254,C_L3255-B_L255,C_L3304-B_L304,C_L3358-B_L358,C_I3359-B_I359,C_L3363-B_L363,C_F3426-B_F426,C_H3468-B_H468
+#3|1YAH|EEE|A|1|0.938|0.001067|10|0.18|CES1 protein|P23141|P23141|3.1.1.1(PDB) 3.1.1.13(UniProt) 3.1.1.56(UniProt)|3.40.50.1820|c.69.1.1|C_L3097-A_L97,C_G3142-A_G142,C_G3143-A_G143,C_S3221-A_S221,C_V3254-A_V254,C_L3304-A_L304,C_L3358-A_L358,C_I3359-A_I359,C_L3363-A_L363,C_H3468-A_H468
+#4|1YAH|EEE|C|3|0.812|0.001554|10|0.16|CES1 protein|P23141|P23141|3.1.1.1(PDB) 3.1.1.13(UniProt) 3.1.1.56(UniProt)|3.40.50.1820|c.69.1.1|C_L3097-C_L97,C_G3142-C_G142,C_G3143-C_G143,C_S3221-C_S221,C_V3254-C_V254,C_L3304-C_L304,C_L3358-C_L358,C_I3359-C_I359,C_L3363-C_L363,C_H3468-C_H468

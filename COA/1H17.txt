@@ -1,0 +1,21 @@
+----- Summary of query ----------------------------------------
+PDB ID: 1H17
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: FORMATE ACETYLTRANSFERASE 1
+UniProt ID: P09373
+UniRef50 ID: P42632
+EC No.: 2.3.1.54(PDB)
+CATH code: 3.20.70.20
+SCOPe code: c.7.1.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 1
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|1H16|COA|A|1000|1|0.000634|12|0.03|FORMATE ACETYLTRANSFERASE 1|P09373|P42632|2.3.1.54(PDB)|3.20.70.20|c.7.1.1|A_K116-A_K116,A_M117-A_M117,A_N145-A_N145,A_Q146-A_Q146,A_F149-A_F149,A_D150-A_D150,A_V151-A_V151,A_Y152-A_Y152,A_L157-A_L157,A_R160-A_R160,A_K161-A_K161,A_E322-A_E322

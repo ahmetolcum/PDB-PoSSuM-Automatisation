@@ -1,0 +1,20 @@
+----- Summary of query ----------------------------------------
+PDB ID: 5YO9
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: 3-Oxoacyl-[acyl-carrier-(ACP)] synthase III C terminal family protein
+UniProt ID: V5VGF8
+UniRef50 ID: A0A0B7D6F8
+EC No.: 2.3.1.180(PDB) 2.3.1.41(PDB)
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 0
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)

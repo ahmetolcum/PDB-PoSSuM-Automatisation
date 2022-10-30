@@ -1,0 +1,21 @@
+----- Summary of query ----------------------------------------
+PDB ID: 3GY9
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: GCN5-related N-acetyltransferase
+UniProt ID: B1YEL6
+UniRef50 ID: B1YEL6
+EC No.: none
+CATH code: 3.40.630.30
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 1
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|3GYA|COA|A|150|1|0.000684|17|0.07|GCN5-related N-acetyltransferase|B1YEL6|B1YEL6|none|3.40.630.30|none|A_E26-A_E26,A_F28-A_F28,A_V81-A_V81,A_Y82-A_Y82,A_V83-A_V83,A_A87-A_A87,A_R88-A_R88,A_S89-A_S89,A_H90-A_H90,A_G91-A_G91,A_I92-A_I92,A_G93-A_G93,A_T94-A_T94,A_Q117-A_Q117,A_A118-A_A118,A_P120-A_P120,A_F121-A_F121

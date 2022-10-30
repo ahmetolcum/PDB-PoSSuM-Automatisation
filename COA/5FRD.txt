@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 5FRD
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: CARBOXYLESTERASE (EST-2)
+UniProt ID: O28735
+UniRef50 ID: A0A075WM11
+EC No.: 3.1.1.1(PDB)
+CATH code: 3.40.50.1820
+SCOPe code: c.69.1.0
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|5FRD|COA|B|1255|0.978|0.001118|21|0.19|CARBOXYLESTERASE (EST-2)|O28735|A0A075WM11|3.1.1.1(PDB)|3.40.50.1820|c.69.1.0|A_S89-B_S89,A_G115-B_G115,A_A116-B_A116,A_R117-B_R117,A_L118-B_L118,A_R119-B_R119,A_V120-B_V120,A_L121-B_L121,A_P122-B_P122,A_I124-B_I124,A_M142-B_M142,A_L169-B_L169,A_C172-B_C172,A_L178-B_L178,A_R182-B_R182,A_K201-B_K201,A_L202-B_L202,A_T203-B_T203,A_K206-B_K206,A_Y207-B_Y207,A_F210-B_F210
+#2|5FRD|COA|A|1257|0.978|0.001118|21|0.19|CARBOXYLESTERASE (EST-2)|O28735|A0A075WM11|3.1.1.1(PDB)|3.40.50.1820|c.69.1.0|B_S89-A_S89,B_G115-A_G115,B_A116-A_A116,B_R117-A_R117,B_L118-A_L118,B_R119-A_R119,B_V120-A_V120,B_L121-A_L121,B_P122-A_P122,B_I124-A_I124,B_M142-A_M142,B_L169-A_L169,B_C172-A_C172,B_L178-A_L178,B_R182-A_R182,B_K201-A_K201,B_L202-A_L202,B_T203-A_T203,B_K206-A_K206,B_Y207-A_Y207,B_F210-A_F210

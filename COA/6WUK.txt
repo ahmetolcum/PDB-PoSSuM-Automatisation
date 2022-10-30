@@ -1,0 +1,21 @@
+----- Summary of query ----------------------------------------
+PDB ID: 6WUK
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Decapping and exoribonuclease protein
+UniProt ID: O70348
+UniRef50 ID: O70348
+EC No.: 3.1.13.-(PDB) 3.6.1.-(PDB)
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 1
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|6WUF|UBG|A|401|0.824|0.002438|20|0.81|Decapping and exoribonuclease protein|O70348|O70348|3.1.13.-(PDB) 3.6.1.-(PDB)|none|none|A_R58-A_R58,A_R95-A_R95,A_E97-A_E97,A_E101-A_R102,A_W131-A_W131,A_R132-A_R132,A_G133-A_G133,A_H134-A_H134,A_E164-A_E164,A_E166-A_E166,A_M185-A_M185,A_Y189-A_Y189,A_T212-A_T212,A_S232-A_S232,A_G233-A_G233,A_Q234-A_Q234,A_Q253-A_Q253,A_L254-A_L254,A_K255-A_K255,A_Q280-A_Q280

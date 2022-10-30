@@ -1,0 +1,25 @@
+----- Summary of query ----------------------------------------
+PDB ID: 5JRH
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Acetyl-coenzyme A synthetase
+UniProt ID: Q8ZKF6
+UniRef50 ID: Q8ZKF6
+EC No.: 6.2.1.1(PDB)
+CATH code: 3.30.300.30
+SCOPe code: e.23.1.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 5
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|2P2B|COA|A|990|0.892|0.002284|18|0.26|Acetyl-coenzyme A synthetase|Q8ZKF6|Q8ZKF6|6.2.1.1(PDB)|3.30.300.30|e.23.1.1|B_F163-A_F163,B_G164-A_G164,B_G165-A_G165,B_R191-A_R191,B_I196-A_I196,B_D306-A_D306,B_V333-A_V333,B_P334-A_P334,B_N335-A_N335,B_T359-A_T359,B_A360-A_A360,B_A363-A_A363,B_S523-A_S523,B_H525-A_H525,B_I554-A_I554,B_R584-A_R584,B_P589-A_P589,B_L590-A_L590
+#2|2P2B|COA|B|991|0.905|0.003364|17|0.27|Acetyl-coenzyme A synthetase|Q8ZKF6|Q8ZKF6|6.2.1.1(PDB)|3.30.300.30|e.23.1.1|B_F163-B_F163,B_G164-B_G164,B_G165-B_G165,B_R191-B_R191,B_I196-B_I196,B_D306-B_D306,B_V333-B_V333,B_P334-B_P334,B_N335-B_N335,B_T359-B_T359,B_A360-B_A360,B_A363-B_A363,B_S523-B_S523,B_H525-B_H525,B_R584-B_R584,B_P589-B_P589,B_L590-B_L590
+#3|5JRH|COA|B|701|0.999|0.001018|13|0.08|Acetyl-coenzyme A synthetase|Q8ZKF6|Q8ZKF6|6.2.1.1(PDB)|3.30.300.30|e.23.1.1|A_F163-B_F163,A_G164-B_G164,A_G165-B_G165,A_R191-B_R191,A_I196-B_I196,A_D306-B_D306,A_V333-B_V333,A_T359-B_T359,A_S523-B_S523,A_H525-B_H525,A_R584-B_R584,A_P589-B_P589,A_L590-B_L590
+#4|5JRH|COA|A|701|0.999|0.001018|13|0.08|Acetyl-coenzyme A synthetase|Q8ZKF6|Q8ZKF6|6.2.1.1(PDB)|3.30.300.30|e.23.1.1|B_F163-A_F163,B_G164-A_G164,B_G165-A_G165,B_R191-A_R191,B_I196-A_I196,B_D306-A_D306,B_V333-A_V333,B_T359-A_T359,B_S523-A_S523,B_H525-A_H525,B_R584-A_R584,B_P589-A_P589,B_L590-A_L590
+#5|2P2B|COA|B|991|0.838|0.003549|13|0.3|Acetyl-coenzyme A synthetase|Q8ZKF6|Q8ZKF6|6.2.1.1(PDB)|3.30.300.30|e.23.1.1|A_F163-B_F163,A_G164-B_G164,A_G165-B_G165,A_R191-B_R191,A_I196-B_I196,A_D306-B_D306,A_V333-B_V333,A_T359-B_T359,A_S523-B_S523,A_H525-B_H525,A_R584-B_R584,A_P589-B_P589,A_L590-B_L590

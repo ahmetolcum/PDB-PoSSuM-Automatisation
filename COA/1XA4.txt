@@ -1,0 +1,23 @@
+----- Summary of query ----------------------------------------
+PDB ID: 1XA4
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Crotonobetainyl-CoA:carnitine CoA-transferase
+UniProt ID: P31572
+UniRef50 ID: Q8GB19
+EC No.: 2.8.3.-(PDB) 2.8.3.21(UniProt)
+CATH code: 3.30.1540.10 3.40.50.10540
+SCOPe code: c.123.1.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 3
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|1XVV|CCQ|A|501|0.898|0.00115|28|1.03|Crotonobetainyl-CoA:carnitine CoA-transferase|P31572|Q8GB19|2.8.3.-(PDB) 2.8.3.21(UniProt)|3.40.50.10540|c.123.1.1|B_S20-A_S20,B_I22-A_I22,B_E23-A_E23,B_I24-A_I24,B_A25-A_A25,B_G26-A_G26,B_I43-A_I43,B_E44-A_E44,B_N45-A_N45,B_L71-A_L71,B_N72-A_N72,B_I73-A_I73,B_F74-A_F74,B_A95-A_A95,B_S96-A_S96,B_K97-A_K97,B_A100-A_A100,B_F101-A_R103,B_R104-A_R104,B_L123-A_L123,B_S124-A_S124,B_G125-A_G125,B_L137-A_L137,B_P138-A_P138,B_A139-A_A139,B_Y140-A_Y140,B_D169-A_A169,B_M200-A_M200
+#2|1XVU|COA|A|501|0.901|0.001246|28|1.06|Crotonobetainyl-CoA:carnitine CoA-transferase|P31572|Q8GB19|2.8.3.-(PDB) 2.8.3.21(UniProt)|3.40.50.10540|c.123.1.1|B_S20-A_S20,B_I22-A_I22,B_E23-A_E23,B_I24-A_I24,B_A25-A_A25,B_G26-A_G26,B_I43-A_I43,B_E44-A_E44,B_N45-A_N45,B_L71-A_L71,B_N72-A_N72,B_I73-A_I73,B_F74-A_F74,B_A95-A_A95,B_S96-A_S96,B_K97-A_K97,B_A100-A_A100,B_F101-A_R103,B_R104-A_R104,B_L123-A_L123,B_S124-A_S124,B_G125-A_G125,B_L137-A_L137,B_P138-A_P138,B_A139-A_A139,B_Y140-A_Y140,B_D169-A_A169,B_M200-A_M200
+#3|1XVT|COA|A|501|0.922|0.001107|28|1.02|Crotonobetainyl-CoA:carnitine CoA-transferase|P31572|Q8GB19|2.8.3.-(PDB) 2.8.3.21(UniProt)|3.40.50.10540|c.123.1.1|B_S20-A_S20,B_I22-A_I22,B_E23-A_E23,B_I24-A_I24,B_A25-A_A25,B_G26-A_G26,B_I43-A_I43,B_E44-A_E44,B_N45-A_N45,B_L71-A_L71,B_N72-A_N72,B_I73-A_I73,B_F74-A_F74,B_A95-A_A95,B_S96-A_S96,B_K97-A_K97,B_A100-A_A100,B_F101-A_R103,B_R104-A_R104,B_L123-A_L123,B_S124-A_S124,B_G125-A_G125,B_L137-A_L137,B_P138-A_P138,B_A139-A_A139,B_Y140-A_Y140,B_D169-A_D169,B_M200-A_M200

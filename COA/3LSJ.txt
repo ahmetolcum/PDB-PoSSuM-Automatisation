@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 3LSJ
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: DesT
+UniProt ID: Q9HUS3
+UniRef50 ID: A0A385B5A3
+EC No.: none
+CATH code: 1.10.357.10
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|3LSJ|COA|B|222|0.999|0.014986|9|0.37|DesT|Q9HUS3|A0A385B5A3|none|1.10.357.10|none|A_G86-B_G86,A_L88-B_L88,A_L140-B_L140,A_K145-B_K145,A_M146-B_M146,A_R195-B_R195,A_M198-B_M198,A_I199-B_I199,A_K202-B_K202
+#2|3LSJ|COA|A|222|0.999|0.014986|9|0.37|DesT|Q9HUS3|A0A385B5A3|none|1.10.357.10|none|B_G86-A_G86,B_L88-A_L88,B_L140-A_L140,B_K145-A_K145,B_M146-A_M146,B_R195-A_R195,B_M198-A_M198,B_I199-A_I199,B_K202-A_K202

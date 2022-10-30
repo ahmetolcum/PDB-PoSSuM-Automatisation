@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 6WN0
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: 4-coumaroyl-homoserine lactone synthase
+UniProt ID: Q6NCZ6
+UniRef50 ID: Q6NCZ6
+EC No.: 2.3.1.229(PDB)
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|6WN0|COA|B|400|0.93|0.001886|18|0.27|4-coumaroyl-homoserine lactone synthase|Q6NCZ6|Q6NCZ6|2.3.1.229(PDB)|none|none|A_I28-B_I28,A_Y29-B_Y29,A_R33-B_R33,A_W35-B_W35,A_S102-B_S102,A_R103-B_R103,A_I104-B_I104,A_F105-B_F105,A_V106-B_V106,A_K110-B_K110,A_R111-B_R111,A_G112-B_G112,A_R118-B_R118,A_E120-B_E120,A_E144-B_E144,A_W146-B_W146,A_W147-B_W147,A_R150-B_R150
+#2|6WN0|COA|A|400|0.93|0.001886|18|0.27|4-coumaroyl-homoserine lactone synthase|Q6NCZ6|Q6NCZ6|2.3.1.229(PDB)|none|none|B_I28-A_I28,B_Y29-A_Y29,B_R33-A_R33,B_W35-A_W35,B_S102-A_S102,B_R103-A_R103,B_I104-A_I104,B_F105-A_F105,B_V106-A_V106,B_K110-A_K110,B_R111-A_R111,B_G112-A_G112,B_R118-A_R118,B_E120-A_E120,B_E144-A_E144,B_W146-A_W146,B_W147-A_W147,B_R150-A_R150

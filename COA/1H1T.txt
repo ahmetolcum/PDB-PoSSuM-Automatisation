@@ -1,0 +1,20 @@
+----- Summary of query ----------------------------------------
+PDB ID: 1H1T
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: PHOSPHOPANTETHEINE ADENYLYLTRANSFERASE
+UniProt ID: P0A6I6
+UniRef50 ID: Q8ZL48
+EC No.: 2.7.7.3(PDB)
+CATH code: 3.40.50.620
+SCOPe code: c.26.1.3
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 0
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)

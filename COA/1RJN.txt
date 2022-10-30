@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 1RJN
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: menB
+UniProt ID: P9WNP5
+UniRef50 ID: A0QRD3
+EC No.: 4.1.3.36(PDB)
+CATH code: 3.90.226.10
+SCOPe code: c.14.1.3
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|3T8A|S0N|B|500|0.853|0.002474|14|0.47|1,4-Dihydroxy-2-naphthoyl-CoA synthase|P9WNP5|A0QRD3|4.1.3.36(PDB)|3.90.226.10|c.14.1.3|B_E56-B_E56,B_V57-B_V57,B_R58-B_R58,B_A60-B_A60,B_K95-B_K95,B_D96-B_D96,B_S103-B_S103,B_G104-B_G104,B_G105-B_G105,B_D106-B_D106,B_Q107-B_Q107,B_R108-B_R108,B_W157-B_W157,B_A159-B_A159
+#2|3T8A|S0N|C|600|0.807|0.002721|12|0.42|1,4-Dihydroxy-2-naphthoyl-CoA synthase|P9WNP5|A0QRD3|4.1.3.36(PDB)|3.90.226.10|c.14.1.3|B_E56-C_E56,B_V57-C_V57,B_R58-C_R58,B_A60-C_A60,B_S103-C_S103,B_G104-C_G104,B_G105-C_G105,B_D106-C_D106,B_Q107-C_Q107,B_R108-C_R108,B_W157-C_W157,B_A159-C_A159

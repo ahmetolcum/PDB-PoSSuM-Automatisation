@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 4PSW
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Histone acetyltransferase type B catalytic subunit
+UniProt ID: Q12341 V8PGJ1
+UniRef50 ID: Q12341 V8PGJ1
+EC No.: 2.3.1.48(PDB)
+CATH code: 1.10.10.390 3.40.630.30 3.90.360.10
+SCOPe code: d.108.1.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|4PSX|COA|A|401|0.884|0.001332|19|0.17|Histone acetyltransferase type B catalytic subunit|P02309 Q12341|P02309 Q12341|2.3.1.48(PDB)|1.10.10.390 3.40.630.30 3.90.360.10|d.108.1.1|A_F160-A_F160,A_I161-A_I161,A_S218-A_S218,A_Q219-A_Q219,A_F220-A_F220,A_L221-A_L221,A_I222-A_I222,A_Q227-A_Q227,A_N228-A_N228,A_K229-A_K229,A_G230-A_G230,A_H231-A_H231,A_G232-A_G232,A_S233-A_S233,A_N258-A_N258,A_F261-A_F261,A_L264-A_L264,A_R267-A_R267,C_K14-C_K12
+#2|4PSX|COA|D|401|0.855|0.001389|19|0.18|Histone acetyltransferase type B catalytic subunit|P02309 Q12341|P02309 Q12341|2.3.1.48(PDB)|1.10.10.390 3.40.630.30 3.90.360.10|d.108.1.1|A_F160-D_F160,A_I161-D_I161,A_S218-D_S218,A_Q219-D_Q219,A_F220-D_F220,A_L221-D_L221,A_I222-D_I222,A_Q227-D_Q227,A_N228-D_N228,A_K229-D_K229,A_G230-D_G230,A_H231-D_H231,A_G232-D_G232,A_S233-D_S233,A_N258-D_N258,A_F261-D_F261,A_L264-D_L264,A_R267-D_R267,C_K14-F_K12

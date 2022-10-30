@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 6NBE
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: N-alpha-acetyltransferase 80
+UniProt ID: Q93015
+UniRef50 ID: Q93015
+EC No.: 2.3.1.-(PDB)
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|6NAS|ACO|N|400|0.9|0.001157|22|0.27|N-alpha-acetyltransferase 80|Q93015|Q93015|2.3.1.-(PDB)|none|none|N_G75-N_G75,N_H76-N_H76,N_Q104-N_Q104,N_W105-N_W105,N_V163-N_V163,N_V164-N_V164,N_V165-N_V165,N_L169-N_L169,N_R170-N_R170,N_G171-N_G171,N_R172-N_R172,N_G173-N_G173,N_F174-N_F174,N_G175-N_G175,N_R176-N_R176,N_T197-N_T197,N_T198-N_T198,N_Q201-N_Q201,N_H203-N_H203,N_F204-N_F204,N_Y205-N_Y205,N_H207-N_H207
+#2|6NBW|SOP|N|400|0.813|0.001171|21|0.13|N-alpha-acetyltransferase 80|P60709 Q93015|P60709 Q93015|2.3.1.-(PDB)|none|none|N_H76-N_H76,N_Q104-N_Q104,N_W105-N_W105,N_V163-N_V163,N_V164-N_V164,N_V165-N_V165,N_L169-N_L169,N_R170-N_R170,N_G171-N_G171,N_R172-N_R172,N_G173-N_G173,N_F174-N_F174,N_G175-N_G175,N_R176-N_R176,N_T197-N_T197,N_T198-N_T198,N_Q201-N_Q201,N_H203-N_H203,N_F204-N_F204,N_Y205-N_Y205,N_H207-N_H207

@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 6YUS
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: SacC
+UniProt ID: O68216
+UniRef50 ID: E0YJD5
+EC No.: none
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|6YUS|COA|B|301|0.962|0.001302|20|0.21|SacC|O68216|E0YJD5|none|none|none|A_I11-B_I11,A_L12-B_L12,A_E16-B_E16,A_A39-B_A39,A_F40-B_F40,A_Q47-B_Q47,A_K48-B_K48,A_Y49-B_Y49,A_N50-B_N50,A_Y51-B_Y51,A_I52-B_I52,A_K53-B_K53,A_D54-B_D54,A_L66-B_L66,A_S113-B_S113,A_Y144-B_Y144,A_R148-B_R148,A_N230-B_N230,A_I233-B_I233,A_R237-B_R237
+#2|6YUS|COA|A|301|0.962|0.001302|20|0.21|SacC|O68216|E0YJD5|none|none|none|B_I11-A_I11,B_L12-A_L12,B_E16-A_E16,B_A39-A_A39,B_F40-A_F40,B_Q47-A_Q47,B_K48-A_K48,B_Y49-A_Y49,B_N50-A_N50,B_Y51-A_Y51,B_I52-A_I52,B_K53-A_K53,B_D54-A_D54,B_L66-A_L66,B_S113-A_S113,B_Y144-A_Y144,B_R148-A_R148,B_N230-A_N230,B_I233-A_I233,B_R237-A_R237

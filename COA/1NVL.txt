@@ -1,0 +1,20 @@
+----- Summary of query ----------------------------------------
+PDB ID: 1NVL
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Acyl-CoA-binding protein
+UniProt ID: P07107
+UniRef50 ID: P07108
+EC No.: none
+CATH code: 1.20.80.10
+SCOPe code: a.11.1.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 0
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)

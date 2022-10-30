@@ -1,0 +1,20 @@
+----- Summary of query ----------------------------------------
+PDB ID: 5BSR
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: 4-coumarate--CoA ligase 2
+UniProt ID: O24146
+UniRef50 ID: P31684
+EC No.: 6.2.1.12(PDB)
+CATH code: 3.30.300.30 3.40.50.12780
+SCOPe code: e.23.1.0
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 0
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)

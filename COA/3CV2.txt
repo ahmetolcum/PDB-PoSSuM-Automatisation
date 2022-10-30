@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 3CV2
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Malate synthase A
+UniProt ID: P08997
+UniRef50 ID: P08997
+EC No.: 2.3.3.9(PDB)
+CATH code: 3.20.20.360
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|3CV2|COA|B|1001|1|0.000631|12|0.02|Malate synthase A|P08997|P08997|2.3.3.9(PDB)|3.20.20.360|none|A_I94-B_I94,A_T95-B_T95,A_G96-B_G96,A_K101-B_K101,A_M102-B_M102,A_N105-B_N105,A_A106-B_A106,A_K152-B_K152,A_Y154-B_Y154,A_A367-B_A367,A_H368-B_H368,A_P369-B_P369
+#2|3CV2|COA|A|1002|1|0.000631|12|0.02|Malate synthase A|P08997|P08997|2.3.3.9(PDB)|3.20.20.360|none|B_I94-A_I94,B_T95-A_T95,B_G96-A_G96,B_K101-A_K101,B_M102-A_M102,B_N105-A_N105,B_A106-A_A106,B_K152-A_K152,B_Y154-A_Y154,B_A367-A_A367,B_H368-A_H368,B_P369-A_P369

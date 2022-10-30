@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 3U9E
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: possible phosphate acetyl/butaryl transferase
+UniProt ID: Q8Y7B7
+UniRef50 ID: A0A099W995
+EC No.: none
+CATH code: 3.40.718.10
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|3U9E|COA|B|290|0.898|0.016505|15|0.51|possible phosphate acetyl/butaryl transferase|Q8Y7B7|A0A099W995|none|3.40.718.10|none|A_K89-B_K89,A_I92-B_I92,A_P93-B_P93,A_T94-B_T94,A_A95-B_A95,A_M98-B_M98,A_Q116-B_Q116,A_A135-B_A135,A_M136-B_M136,A_V256-B_V256,A_I265-B_I265,A_S266-B_S266,A_S267-B_S267,A_R268-B_R268,A_N269-B_N269
+#2|3U9E|COA|A|290|0.898|0.016505|15|0.51|possible phosphate acetyl/butaryl transferase|Q8Y7B7|A0A099W995|none|3.40.718.10|none|B_K89-A_K89,B_I92-A_I92,B_P93-A_P93,B_T94-A_T94,B_A95-A_A95,B_M98-A_M98,B_Q116-A_Q116,B_A135-A_A135,B_M136-A_M136,B_V256-A_V256,B_I265-A_I265,B_S266-A_S266,B_S267-A_S267,B_R268-A_R268,B_N269-A_N269

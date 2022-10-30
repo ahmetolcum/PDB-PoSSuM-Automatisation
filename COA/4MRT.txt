@@ -1,0 +1,21 @@
+----- Summary of query ----------------------------------------
+PDB ID: 4MRT
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: 4'-phosphopantetheinyl transferase sfp
+UniProt ID: O30409 P39135
+UniRef50 ID: O30409 P39135
+EC No.: 2.7.8.-(PDB) 2.7.8.7(UniProt)
+CATH code: 1.10.1200.10 3.90.470.20
+SCOPe code: a.28.1.2 d.150.1.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 1
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|1QR0|COA|A|300|0.784|0.004143|21|0.94|4'-PHOSPHOPANTETHEINYL TRANSFERASE SFP|P39135|P39135|2.7.8.7(UniProt)|3.90.470.20|d.150.1.1|A_K28-A_K28,A_K31-A_K31,A_T44-A_T44,A_Q71-A_T70,A_E72-A_E72,A_Y73-A_Y73,A_G74-A_G74,A_K75-A_K75,A_P76-A_P76,A_N87-A_N87,A_I88-A_I88,A_S89-A_S89,A_H90-A_H90,A_I106-A_I106,A_D107-A_D107,A_I108-A_I108,A_E109-A_E109,A_E151-A_E151,A_I154-A_I154,A_K155-A_K155,A_G158-A_G158

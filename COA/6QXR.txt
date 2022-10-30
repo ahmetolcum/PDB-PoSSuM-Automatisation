@@ -1,0 +1,26 @@
+----- Summary of query ----------------------------------------
+PDB ID: 6QXR
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Possible 4'-phosphopantetheinyl transferase
+UniProt ID: B1MD73
+UniRef50 ID: A0PQD8
+EC No.: none
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 6
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|6QYF|COA|A|301|0.834|0.001922|20|0.27|Possible 4'-phosphopantetheinyl transferase|B1MD73|A0PQD8|none|none|none|A_R45-A_R45,A_F49-A_F49,A_V52-A_V52,A_R53-A_R53,A_K72-A_K72,A_K75-A_K75,A_G76-A_G76,A_Q77-A_Q77,A_P78-A_P78,A_M88-A_M88,A_T89-A_T89,A_H90-A_H90,A_D111-A_D111,A_A112-A_A112,A_E113-A_E113,A_E153-A_E153,A_Y156-A_Y156,A_K157-A_K157,A_F160-A_F160,A_P161-A_P161
+#2|6QWU|COA|A|301|0.816|0.001984|20|0.28|Possible 4'-phosphopantetheinyl transferase|B1MD73|A0PQD8|none|none|none|A_R45-A_R45,A_F49-A_F49,A_V52-A_V52,A_R53-A_R53,A_K72-A_K72,A_K75-A_K75,A_G76-A_G76,A_Q77-A_Q77,A_P78-A_P78,A_M88-A_M88,A_T89-A_T89,A_H90-A_H90,A_D111-A_D111,A_A112-A_A112,A_E113-A_E113,A_E153-A_E153,A_Y156-A_Y156,A_K157-A_K157,A_F160-A_F160,A_P161-A_P161
+#3|6QXQ|COA|A|301|0.871|0.002496|19|0.27|Possible 4'-phosphopantetheinyl transferase|B1MD73|A0PQD8|none|none|none|A_R45-A_R45,A_F49-A_F49,A_V52-A_V52,A_R53-A_R53,A_K72-A_K72,A_K75-A_K75,A_G76-A_G76,A_Q77-A_Q77,A_P78-A_P78,A_M88-A_M88,A_T89-A_T89,A_H90-A_H90,A_D111-A_D111,A_A112-A_A112,A_E153-A_E153,A_Y156-A_Y156,A_K157-A_K157,A_F160-A_F160,A_P161-A_P161
+#4|6CT5|COA|A|301|0.848|0.002426|18|0.28|4'-phosphopantetheinyl transferase|none|none|none|none|none|A_R45-A_R48,A_F49-A_F52,A_V52-A_V55,A_R53-A_R56,A_K72-A_K75,A_K75-A_K78,A_G76-A_G79,A_Q77-A_E80,A_P78-A_P81,A_M88-A_L91,A_T89-A_T92,A_H90-A_H93,A_D111-A_D114,A_A112-A_A115,A_Y156-A_Y160,A_K157-A_K161,A_F160-A_F164,A_P161-A_P165
+#5|6CT5|COA|B|301|0.844|0.002761|18|0.3|4'-phosphopantetheinyl transferase|none|none|none|none|none|A_R45-B_R48,A_F49-B_F52,A_V52-B_V55,A_R53-B_R56,A_K72-B_K75,A_K75-B_K78,A_G76-B_G79,A_Q77-B_E80,A_P78-B_P81,A_M88-B_L91,A_T89-B_T92,A_H90-B_H93,A_D111-B_D114,A_A112-B_A115,A_Y156-B_Y160,A_K157-B_K161,A_F160-B_F164,A_P161-B_P165
+#6|6QYG|COA|A|301|0.894|0.001186|18|0.14|Possible 4'-phosphopantetheinyl transferase|B1MD73|A0PQD8|none|none|none|A_R45-A_R45,A_F49-A_F49,A_V52-A_V52,A_R53-A_R53,A_K72-A_K72,A_K75-A_K75,A_G76-A_G76,A_Q77-A_Q77,A_P78-A_P78,A_M88-A_M88,A_T89-A_T89,A_H90-A_H90,A_D111-A_D111,A_E153-A_E153,A_Y156-A_Y156,A_K157-A_K157,A_F160-A_F160,A_P161-A_P161

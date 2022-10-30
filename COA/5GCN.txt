@@ -1,0 +1,20 @@
+----- Summary of query ----------------------------------------
+PDB ID: 5GCN
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: HISTONE ACETYLTRANSFERASE GCN5
+UniProt ID: Q27198
+UniRef50 ID: Q27198
+EC No.: 2.3.1.48(UniProt)
+CATH code: 3.40.630.30
+SCOPe code: d.108.1.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 0
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)

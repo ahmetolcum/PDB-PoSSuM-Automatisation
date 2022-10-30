@@ -1,0 +1,23 @@
+----- Summary of query ----------------------------------------
+PDB ID: 6HE2
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: 2-hydroxyisobutyryl-CoA synthetase
+UniProt ID: I3VE75
+UniRef50 ID: I3VE75
+EC No.: 6.2.1.-(PDB)
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 3
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|6HE2|COA|B|503|0.981|0.001081|11|0.07|2-hydroxyisobutyryl-CoA synthetase|I3VE75|I3VE75|6.2.1.-(PDB)|none|none|A_G187-B_G187,A_A188-B_A188,A_P189-B_P189,A_G190-B_G190,A_M191-B_M191,A_S192-B_S192,A_T210-B_T210,A_S212-B_S212,A_Y213-B_Y213,A_H216-B_H216,A_V220-B_V220
+#2|6HE2|COA|A|503|0.981|0.001081|11|0.07|2-hydroxyisobutyryl-CoA synthetase|I3VE75|I3VE75|6.2.1.-(PDB)|none|none|B_G187-A_G187,B_A188-A_A188,B_P189-A_P189,B_G190-A_G190,B_M191-A_M191,B_S192-A_S192,B_T210-A_T210,B_S212-A_S212,B_Y213-A_Y213,B_H216-A_H216,B_V220-A_V220
+#3|6PGK|CLA|h|205|0.801|0.060762|9|1.65|Photosystem I reaction center subunit XI|P0A427 Q8DGB4|P25902 Q55330|none|none|none|B_V160-I_L21,B_G187-I_V25,B_M191-I_L29,B_S192-I_L32,B_T210-L_V88,B_S212-L_T90,B_Y213-L_A91,B_H216-L_A94,B_V220-L_L98

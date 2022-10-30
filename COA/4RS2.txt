@@ -1,0 +1,24 @@
+----- Summary of query ----------------------------------------
+PDB ID: 4RS2
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Predicted acyltransferase with acyl-CoA N-acyltransferase domain
+UniProt ID: none
+UniRef50 ID: none
+EC No.: none
+CATH code: 3.40.630.30
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 4
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|4RS2|COA|B|200|1|0.000725|22|0.1|Predicted acyltransferase with acyl-CoA N-acyltransferase domain|none|none|none|3.40.630.30|none|A_S21-B_S21,A_F22-B_F22,A_E23-B_E23,A_L77-B_L77,A_A78-B_A78,A_V79-B_V79,A_Y83-B_Y83,A_R84-B_R84,A_G85-B_G85,A_Q86-B_Q86,A_G87-B_G87,A_L88-B_L88,A_A89-B_A89,A_R90-B_R90,A_Q91-B_Q91,A_D113-B_D113,A_A115-B_A115,A_L116-B_L116,A_R119-B_R119,A_F120-B_F120,A_C170-B_C170,A_G171-B_G171
+#2|4RS2|COA|A|200|1|0.000725|22|0.1|Predicted acyltransferase with acyl-CoA N-acyltransferase domain|none|none|none|3.40.630.30|none|B_S21-A_S21,B_F22-A_F22,B_E23-A_E23,B_L77-A_L77,B_A78-A_A78,B_V79-A_V79,B_Y83-A_Y83,B_R84-A_R84,B_G85-A_G85,B_Q86-A_Q86,B_G87-A_G87,B_L88-A_L88,B_A89-A_A89,B_R90-A_R90,B_Q91-A_Q91,B_D113-A_D113,B_A115-A_A115,B_L116-A_L116,B_R119-A_R119,B_F120-A_F120,B_C170-A_C170,B_G171-A_G171
+#3|5US1|TAR|J|201|0.81|0.002686|10|0.27|Aminoglycoside 2'-N-acetyltransferase|Q52424|Q52424|2.3.1.59(PDB)|none|d.108.1.0|A_V79-J_V83,A_Y83-J_Y87,A_R84-J_R88,A_G85-J_R89,A_Q86-J_Q90,A_G87-J_G91,A_L88-J_I92,A_A89-J_G93,A_R90-J_R94,A_Q91-J_Q95
+#4|5US1|TAR|J|201|0.81|0.003049|10|0.28|Aminoglycoside 2'-N-acetyltransferase|Q52424|Q52424|2.3.1.59(PDB)|none|d.108.1.0|B_V79-J_V83,B_Y83-J_Y87,B_R84-J_R88,B_G85-J_R89,B_Q86-J_Q90,B_G87-J_G91,B_L88-J_I92,B_A89-J_G93,B_R90-J_R94,B_Q91-J_Q95

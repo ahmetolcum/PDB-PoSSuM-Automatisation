@@ -1,0 +1,29 @@
+----- Summary of query ----------------------------------------
+PDB ID: 5EBV
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Enhanced intracellular survival protein
+UniProt ID: P9WFK7
+UniRef50 ID: A1KLA8
+EC No.: 2.3.1.-(UniProt)
+CATH code: 3.40.630.30
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 9
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|3SXN|COA|A|500|0.808|0.003978|16|0.49|Enhanced intracellular survival protein|A0QY29|A1KLA8|2.3.1.-(UniProt)|3.40.630.30|none|A_V85-A_V85,A_A86-A_A86,A_V87-A_V87,A_H91-A_H91,A_R92-A_R92,A_R93-A_R93,A_R94-A_R94,A_G95-A_G95,A_L96-A_V96,A_L97-A_L97,A_R98-A_R98,A_S121-A_S121,A_I125-A_I125,A_Y126-A_Y126,A_R128-A_R128,A_F129-A_F129
+#2|3SXN|COA|B|500|0.787|0.004588|16|0.48|Enhanced intracellular survival protein|A0QY29|A1KLA8|2.3.1.-(UniProt)|3.40.630.30|none|A_V85-B_V85,A_A86-B_A86,A_V87-B_V87,A_H91-B_H91,A_R92-B_R92,A_R93-B_R93,A_R94-B_R94,A_G95-B_G95,A_L96-B_V96,A_L97-B_L97,A_R98-B_R98,A_S121-B_S121,A_I125-B_I125,A_Y126-B_Y126,A_R128-B_R128,A_F129-B_F129
+#3|3SXN|COA|C|500|0.792|0.005018|16|0.48|Enhanced intracellular survival protein|A0QY29|A1KLA8|2.3.1.-(UniProt)|3.40.630.30|none|A_V85-C_V85,A_A86-C_A86,A_V87-C_V87,A_H91-C_H91,A_R92-C_R92,A_R93-C_R93,A_R94-C_R94,A_G95-C_G95,A_L96-C_V96,A_L97-C_L97,A_R98-C_R98,A_S121-C_S121,A_I125-C_I125,A_Y126-C_Y126,A_R128-C_R128,A_F129-C_F129
+#4|3SXN|COA|D|500|0.815|0.00446|16|0.5|Enhanced intracellular survival protein|A0QY29|A1KLA8|2.3.1.-(UniProt)|3.40.630.30|none|A_V85-D_V85,A_A86-D_A86,A_V87-D_V87,A_H91-D_H91,A_R92-D_R92,A_R93-D_R93,A_R94-D_R94,A_G95-D_G95,A_L96-D_V96,A_L97-D_L97,A_R98-D_R98,A_S121-D_S121,A_I125-D_I125,A_Y126-D_Y126,A_R128-D_R128,A_F129-D_F129
+#5|3R1K|COA|A|500|0.809|0.002162|16|0.33|Enhanced intracellular survival protein|P9WFK7|A1KLA8|2.3.1.-(UniProt)|3.40.630.30|none|A_V85-A_V85,A_A86-A_A86,A_V87-A_V87,A_H91-A_H91,A_R92-A_R92,A_R93-A_R93,A_R94-A_R94,A_G95-A_G95,A_L96-A_L96,A_L97-A_L97,A_R98-A_R98,A_S121-A_S121,A_I125-A_I125,A_Y126-A_Y126,A_R128-A_R128,A_F129-A_F129
+#6|5EC4|COA|A|501|0.822|0.001151|15|0.12|Enhanced intracellular survival protein|P9WFK7|A1KLA8|2.3.1.-(UniProt)|3.40.630.30|none|A_V85-A_V85,A_A86-A_A86,A_V87-A_V87,A_H91-A_H91,A_R92-A_R92,A_R93-A_R93,A_R94-A_R94,A_G95-A_G95,A_L96-A_L96,A_L97-A_L97,A_R98-A_R98,A_S121-A_S121,A_I125-A_I125,A_Y126-A_Y126,A_R128-A_R128
+#7|6B0U|COA|C|501|0.788|0.008056|14|0.38|N-acetyltransferase Eis|P9WFK7|A1KLA8|2.3.1.-(PDB)|none|none|A_V85-C_V85,A_V87-C_V87,A_H91-C_H91,A_R92-C_R92,A_R93-C_R93,A_R94-C_R94,A_G95-C_G95,A_L96-C_L96,A_L97-C_L97,A_R98-C_R98,A_I125-C_I125,A_Y126-C_Y126,A_R128-C_R128,A_F129-C_F129
+#8|6B0U|COA|A|502|0.817|0.008377|13|0.89|N-acetyltransferase Eis|P9WFK7|A1KLA8|2.3.1.-(PDB)|none|none|A_V87-A_V87,A_H91-A_H91,A_R92-A_R92,A_R93-A_R93,A_R94-A_R94,A_G95-A_G95,A_L96-A_L96,A_L97-A_L97,A_R98-A_R98,A_S121-A_E122,A_I125-A_I125,A_R128-A_R128,A_F129-A_F129
+#9|6B0U|COA|B|501|0.962|0.003611|11|0.29|N-acetyltransferase Eis|P9WFK7|A1KLA8|2.3.1.-(PDB)|none|none|A_V87-B_V87,A_H91-B_H91,A_R92-B_R92,A_R93-B_R93,A_R94-B_R94,A_G95-B_G95,A_L96-B_L96,A_L97-B_L97,A_R98-B_R98,A_R128-B_R128,A_F129-B_F129

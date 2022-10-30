@@ -1,0 +1,20 @@
+----- Summary of query ----------------------------------------
+PDB ID: 2REQ
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: METHYLMALONYL-COA MUTASE
+UniProt ID: P11652 P11653
+UniRef50 ID: P11652 P11653
+EC No.: 5.4.99.2(PDB)
+CATH code: 3.20.20.240
+SCOPe code: c.1.19.1
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 0
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)

@@ -1,0 +1,25 @@
+----- Summary of query ----------------------------------------
+PDB ID: 2RKV
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Trichothecene 3-O-acetyltransferase
+UniProt ID: O42692
+UniRef50 ID: O42692
+EC No.: none
+CATH code: 3.30.559.10
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 5
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|2ZBA|COA|B|460|0.843|0.00139|18|0.22|Trichothecene 3-O-acetyltransferase|O94197|O94197|2.3.1.-(UniProt)|3.30.559.10|none|A_V162-B_T171,A_K245-B_K253,A_F258-B_F266,A_V259-B_V267,A_S260-B_S268,A_T261-B_T269,A_D262-B_D270,A_D263-B_D271,A_R291-B_R299,A_A292-B_A300,A_V293-B_V301,A_D294-B_D302,A_Q310-B_Q318,A_R335-B_R343,A_L338-B_L346,A_S378-B_S386,A_S379-B_S387,A_W380-B_W388
+#2|2ZBA|COA|C|460|0.851|0.001056|18|0.17|Trichothecene 3-O-acetyltransferase|O94197|O94197|2.3.1.-(UniProt)|3.30.559.10|none|A_V162-C_T171,A_K245-C_K253,A_F258-C_F266,A_V259-C_V267,A_S260-C_S268,A_T261-C_T269,A_D262-C_D270,A_D263-C_D271,A_R291-C_R299,A_A292-C_A300,A_V293-C_V301,A_D294-C_D302,A_Q310-C_Q318,A_R335-C_R343,A_L338-C_L346,A_S378-C_S386,A_S379-C_S387,A_W380-C_W388
+#3|3B2S|COA|A|454|0.908|0.000724|18|0.09|Trichothecene 3-O-acetyltransferase|O42692|O42692|none|3.30.559.10|none|A_V162-A_V162,A_K245-A_K245,A_F258-A_F258,A_V259-A_V259,A_S260-A_S260,A_T261-A_T261,A_D262-A_D262,A_D263-A_D263,A_R291-A_R291,A_A292-A_A292,A_V293-A_V293,A_D294-A_D294,A_Q310-A_Q310,A_R335-A_R335,A_L338-A_L338,A_S378-A_S378,A_S379-A_S379,A_W380-A_W380
+#4|3B30|ETB|A|452|0.943|0.000722|18|0.09|Trichothecene 3-O-acetyltransferase|O42692|O42692|none|3.30.559.10|none|A_V162-A_V162,A_K245-A_K245,A_F258-A_F258,A_V259-A_V259,A_S260-A_S260,A_T261-A_T261,A_D262-A_D262,A_D263-A_D263,A_R291-A_R291,A_A292-A_A292,A_V293-A_V293,A_D294-A_D294,A_Q310-A_Q310,A_R335-A_R335,A_L338-A_L338,A_S378-A_S378,A_S379-A_S379,A_W380-A_W380
+#5|2ZBA|COA|A|462|0.808|0.001341|17|0.16|Trichothecene 3-O-acetyltransferase|O94197|O94197|2.3.1.-(UniProt)|3.30.559.10|none|A_V162-A_T171,A_K245-A_K253,A_F258-A_F266,A_S260-A_S268,A_T261-A_T269,A_D262-A_D270,A_D263-A_D271,A_R291-A_R299,A_A292-A_A300,A_V293-A_V301,A_D294-A_D302,A_Q310-A_Q318,A_R335-A_R343,A_L338-A_L346,A_S378-A_S386,A_S379-A_S387,A_W380-A_W388

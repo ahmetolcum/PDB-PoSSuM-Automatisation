@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 4UA3
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: Uncharacterized N-acetyltransferase C825.04c
+UniProt ID: Q9USH6
+UniRef50 ID: Q9USH6
+EC No.: 2.3.1.-(PDB) 2.3.1.257(UniProt)
+CATH code: 3.40.630.30
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|4UA3|COA|B|301|0.908|0.001771|23|0.3|Uncharacterized N-acetyltransferase C825.04c|Q9USH6|Q9USH6|2.3.1.-(PDB) 2.3.1.257(UniProt)|3.40.630.30|none|A_N59-B_N59,A_M60-B_M60,A_Y118-B_Y118,A_E119-B_E119,A_I120-B_I120,A_Q121-B_Q121,A_L122-B_L122,A_I126-B_I126,A_R127-B_R127,A_G128-B_G128,A_R129-B_R129,A_N130-B_N130,A_V131-B_V131,A_G132-B_G132,A_K133-B_K133,A_N159-B_N159,A_N161-B_N161,A_A162-B_A162,A_N164-B_N164,A_F165-B_F165,A_Y166-B_Y166,A_H168-B_H168,A_F169-B_F169
+#2|4UA3|COA|A|301|0.908|0.001771|23|0.3|Uncharacterized N-acetyltransferase C825.04c|Q9USH6|Q9USH6|2.3.1.-(PDB) 2.3.1.257(UniProt)|3.40.630.30|none|B_N59-A_N59,B_M60-A_M60,B_Y118-A_Y118,B_E119-A_E119,B_I120-A_I120,B_Q121-A_Q121,B_L122-A_L122,B_I126-A_I126,B_R127-A_R127,B_G128-A_G128,B_R129-A_R129,B_N130-A_N130,B_V131-A_V131,B_G132-A_G132,B_K133-A_K133,B_N159-A_N159,B_N161-A_N161,B_A162-A_A162,B_N164-A_N164,B_F165-A_F165,B_Y166-A_Y166,B_H168-A_H168,B_F169-A_F169

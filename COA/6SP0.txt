@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 6SP0
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: N-acetyltransferase ESCO2
+UniProt ID: Q8CIB9
+UniRef50 ID: Q8CIB9
+EC No.: 2.3.1.-(PDB)
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|5N1U|COA|A|801|0.839|0.001626|20|0.58|XEco2|A8QZK6|A8QZK6|none|none|none|A_L460-A_L562,A_I529-A_I639,A_W530-A_W640,A_V531-A_V641,A_K535-A_M645,A_R536-A_R646,A_R537-A_R647,A_K538-A_K648,A_R539-A_A649,A_I540-A_I650,A_A541-A_A651,A_R542-A_S652,A_S566-A_S676,A_P568-A_P678,A_T569-A_T679,A_D571-A_D681,A_G572-A_G682,A_L574-A_L684,A_F575-A_F685,A_K578-A_T688
+#2|5N1U|COA|B|801|0.83|0.001687|20|1.31|XEco2|A8QZK6|A8QZK6|none|none|none|A_Q464-B_L562,A_I529-B_I639,A_W530-B_W640,A_V531-B_V641,A_K535-B_M645,A_R536-B_R646,A_R537-B_R647,A_K538-B_K648,A_R539-B_A649,A_I540-B_I650,A_A541-B_A651,A_R542-B_S652,A_S566-B_S676,A_P568-B_P678,A_T569-B_T679,A_D571-B_D681,A_G572-B_G682,A_L574-B_L684,A_F575-B_F685,A_K578-B_T688

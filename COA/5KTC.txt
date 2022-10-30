@@ -1,0 +1,21 @@
+----- Summary of query ----------------------------------------
+PDB ID: 5KTC
+HET code: COA
+Chain ID: Any
+Residue No.: Any
+Protein Name: FdhC
+UniProt ID: V5RDR9
+UniRef50 ID: V5RDR9
+EC No.: none
+CATH code: 3.40.630.30
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 1
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|5KTD|COA|A|203|1|0.000697|23|0.1|FdhC|V5RDR9|V5RDR9|none|3.40.630.30|none|A_L33-A_L33,A_Y36-A_Y36,A_I37-A_I37,A_W97-A_W97,A_I98-A_I98,A_L99-A_L99,A_K103-A_K103,A_K105-A_K105,A_Y106-A_Y106,A_A108-A_A108,A_V109-A_V109,A_E131-A_E131,A_V132-A_V132,A_M133-A_M133,A_N136-A_N136,A_K138-A_K138,A_V139-A_V139,A_F142-A_F142,A_K145-A_K145,A_M146-A_M146,A_Y174-A_Y174,A_R176-A_R176,A_F177-A_F177
