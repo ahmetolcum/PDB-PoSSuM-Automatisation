@@ -1,0 +1,24 @@
+----- Summary of query ----------------------------------------
+PDB ID: 6V2T
+HET code: FOL
+Chain ID: Any
+Residue No.: Any
+Protein Name: dTDP-4-amino-4,6-dideoxyglucose formyltransferase
+UniProt ID: A0A1Z4A6S6
+UniRef50 ID: A0A1C3JC06
+EC No.: none
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 4
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|4YFY|1YJ|A|302|0.784|0.002122|19|0.33|VioF|M9P0Q2|M9P0Q2|none|3.40.50.170|none|A_S75-A_S73,A_C78-A_C76,A_K79-A_K77,A_Q80-A_Q78,A_I81-A_I79,A_F82-A_F80,A_V87-A_V85,A_N94-A_N92,A_W106-A_W104,A_H124-A_H122,A_M126-A_M124,A_N127-A_D125,A_E128-A_S126,A_E129-A_E127,A_I130-A_V128,A_D131-A_D129,A_D132-A_H130,A_Y187-A_Y185,A_I190-A_I188
+#2|4YFY|1YJ|A|302|0.812|0.001234|18|0.2|VioF|M9P0Q2|M9P0Q2|none|3.40.50.170|none|B_S75-A_S73,B_C78-A_C76,B_K79-A_K77,B_Q80-A_Q78,B_I81-A_I79,B_F82-A_F80,B_V87-A_V85,B_N94-A_N92,B_W106-A_W104,B_H124-A_H122,B_M126-A_M124,B_N127-A_D125,B_E128-A_S126,B_E129-A_E127,B_I130-A_V128,B_D131-A_D129,B_D132-A_H130,B_Y187-A_Y185
+#3|6V2T|FOL|B|302|0.941|0.001131|18|0.22|dTDP-4-amino-4,6-dideoxyglucose formyltransferase|A0A1Z4A6S6|A0A1C3JC06|none|none|none|A_S75-B_S75,A_C78-B_C78,A_K79-B_K79,A_Q80-B_Q80,A_I81-B_I81,A_F82-B_F82,A_V87-B_V87,A_N94-B_N94,A_W106-B_W106,A_H124-B_H124,A_M126-B_M126,A_N127-B_N127,A_E128-B_E128,A_E129-B_E129,A_I130-B_I130,A_D131-B_D131,A_D132-B_D132,A_Y187-B_Y187
+#4|6V2T|FOL|A|302|0.941|0.001131|18|0.22|dTDP-4-amino-4,6-dideoxyglucose formyltransferase|A0A1Z4A6S6|A0A1C3JC06|none|none|none|B_S75-A_S75,B_C78-A_C78,B_K79-A_K79,B_Q80-A_Q80,B_I81-A_I81,B_F82-A_F82,B_V87-A_V87,B_N94-A_N94,B_W106-A_W106,B_H124-A_H124,B_M126-A_M126,B_N127-A_N127,B_E128-A_E128,B_E129-A_E129,B_I130-A_I130,B_D131-A_D131,B_D132-A_D132,B_Y187-A_Y187

@@ -1,0 +1,22 @@
+----- Summary of query ----------------------------------------
+PDB ID: 5VYH
+HET code: FOL
+Chain ID: Any
+Residue No.: Any
+Protein Name: S protein
+UniProt ID: K9N5Q8
+UniRef50 ID: K9N5Q8
+EC No.: none
+CATH code: none
+SCOPe code: none
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 2
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|6PXH|DHF|A|428|1|0.000931|15|0.15|MERS-CoV S1-NTD|K9N5Q8|K9N5Q8|none|none|none|A_W44-A_W44,A_P45-A_P45,A_R46-A_R46,A_V86-A_V86,A_A123-A_A123,A_T127-A_T127,A_G128-A_G128,A_T129-A_T129,A_I131-A_I131,A_I140-A_I140,A_A309-A_A309,A_W310-A_W310,A_A311-A_A311,A_A312-A_A312,A_Y314-A_Y314
+#2|6PXH|DHF|B|419|1|0.001229|15|0.2|MERS-CoV S1-NTD|K9N5Q8|K9N5Q8|none|none|none|A_W44-B_W44,A_P45-B_P45,A_R46-B_R46,A_V86-B_V86,A_A123-B_A123,A_T127-B_T127,A_G128-B_G128,A_T129-B_T129,A_I131-B_I131,A_I140-B_I140,A_A309-B_A309,A_W310-B_W310,A_A311-B_A311,A_A312-B_A312,A_Y314-B_Y314

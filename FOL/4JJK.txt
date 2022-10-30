@@ -1,0 +1,21 @@
+----- Summary of query ----------------------------------------
+PDB ID: 4JJK
+HET code: FOL
+Chain ID: Any
+Residue No.: Any
+Protein Name: Formate--tetrahydrofolate ligase
+UniProt ID: Q2RM91
+UniRef50 ID: O66164
+EC No.: 6.3.4.3(PDB)
+CATH code: 3.40.50.300
+SCOPe code: c.37.1.10
+Search against 'Known ligand binding sites'
+Sequence redundancy 'All UniProtIDs'
+Cosine similarity >= 0.78
+Aligned length >= 7
+Annotationos: EC/CATH/SCOPe/SCOP/GO/: Yes/Yes/Yes/No/No/
+----- Search Results ------------------------------------------
+Number of hits: 1
+----- Records -------------------------------------------------
+#|PDB ID|HET code|Chain ID|Res. No.|Cosine value|p value|Aligned length|RMSD(Ca)|Protein Name|UniProt ID|UniRef50|EC No.|CATH code|SCOPe code|Aligned residues (Ca atoms)
+#1|4IOM|FOL|A|608|0.921|0.001025|13|0.18|Formate--tetrahydrofolate ligase|Q2RM91|O66164|6.3.4.3(PDB)|3.40.50.300|c.37.1.10|A_N382-A_N382,A_A383-A_A383,A_F384-A_F384,A_P385-A_P385,A_D387-A_D387,A_E389-A_E389,A_L392-A_L392,A_N393-A_N393,A_Y396-A_Y396,A_L408-A_L408,A_E410-A_E410,A_W412-A_W412,A_A413-A_A413
