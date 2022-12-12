@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 import lxml.html as lh
 import ssl
 import os
+import time
 
 def findsequni(id,chain):
   seq=""

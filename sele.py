@@ -11,6 +11,7 @@ from concat import folderconcat
 from post_possum import post_possum
 from grouping import grouping
 from align import align
+from query_pdb import search_rcsb
 
 def matrixchecker(High_RMSDs, protein):
     exist = False
@@ -32,6 +33,7 @@ def allelementsindictionary(prodict):
 def chromesetter(chromeDriver ,dest, headless):
     WINDOW_SIZE = "1920,1080"
     chromeOptions = Options()
+    chromeOptions.add_experimental_option('excludeSwitches', ['enable-logging'])
     prefs = {"download.default_directory" : dest}
     if(headless):
         chromeOptions.add_argument("--headless")
@@ -48,6 +50,8 @@ def inputtaker():
     while(inpligands == "" ):
         print("Wrong input format!")
         inpligands = input("Enter your ligand's three letter code: ")
+    if len(inpligands) == 1:
+        inpligands = inpligands + " "
     if(inpligands.find(",")):
         inpligands = inpligands.split(",")
         for element in inpligands:
@@ -78,6 +82,7 @@ def inputtaker():
         else:
             print("Wrong Input!!!")
             correctinp = 0
+    
     return inpligands,  dest1, clean, max_RMSD
 def download_wait(path_to_downloads):
     seconds = 0
@@ -109,6 +114,12 @@ def PDBconnecter(dest, ligand, chromedriver, headless, prodict):
         down = browser1.find_element(By.XPATH,"/html/body/div/div[3]/div/div/div[3]/div[2]/div[3]/table/tbody/tr/td[2]/div/div[1]/div[3]/div/div[2]/span")
         down.click()
         time.sleep(1)
+        try:
+            browser1.switch_to.alert.dismiss()
+        except:
+            #fallback procedure if there is no any pop-up
+            print("\n")
+        time.sleep(2)
         listprot = browser1.find_element(By.TAG_NAME,"textarea")
         liste = []
         if len(liste) == 0:
@@ -263,10 +274,11 @@ def main():
     prodict = {}
     resultless, lenlist = [], []
     clean = False
-    #ligand, destination, clean, max_RMSD = inputtaker()
+    ligand, destination, clean, max_RMSD = inputtaker()
     headless = True
-    """
+    #response = search_rcsb(ligand)
     prodict = PDBconnecter(destination, ligand, chromedriver, headless, prodict)
+
     resultless, High_RMSDs, destination = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
     
     
@@ -279,10 +291,10 @@ def main():
     #clean = True
     #concatfolder = folderconcat(exceldest)
     destination = post_possum(destination, ligand, clean)
-    """
-    destination = "/Users/eceulutas/Desktop/pdbsum/PDB-PoSSuM-Automatisation/FOL/ExcelFiles/files"
-    destination = post_possum(destination, "FOL", clean)
-    #destination= align(destination)
+
+    #destination = "/Users/eceulutas/Desktop/pdbsum/PDB-PoSSuM-Automatisation/FOL/ExcelFiles/files"
+    #destination = post_possum(destination, ligand, clean)
+    destination= align(destination)
     #print("now grouping")
     #grouping(exceldest)
 if __name__ == "__main__":
