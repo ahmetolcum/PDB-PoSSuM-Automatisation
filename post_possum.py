@@ -12,8 +12,7 @@ from bs4 import BeautifulSoup
 import lxml.html as lh
 import ssl
 import os
-import time
-
+#aynı proteinin farklı chainleri kıyaslamayı yapalım
 def findsequni(id,chain):
   seq=""
   if id!="" or id!="none":
@@ -198,114 +197,115 @@ def find_occurence(element,pdbID):
             occurences.append(i)
     return occurences
 
-def post_possum(folderpath,ligand,clean):
-    dest = folderpath+"/ResultFiles"
+def post_possum(filename,folderpath,ligand,clean):
+    dest = folderpath+"/ResultFiles2"
     arr = [f for f in os.listdir(folderpath) if not f.startswith('.')]#os.listdir(folderpath)
     #print(arr)
     folderpath = folderpath + "/"
-    os.mkdir(dest)
+    #os.mkdir(dest)
     nonputs = []
     #print(ligand)
-    for filename in arr:
-        try:
-            print(filename)
-            df = pd.read_excel(join(folderpath, filename))
-            #df.head(32)
-            names = ['PDB ID','HET code','Chain ID','Res. No.','Cosine value','p value','Aligned length','RMSD(Ca)','Protein Name','UniProt ID','UniRef50','EC No.','CATH code','SCOPe code','Aligned residues (Ca atoms)']
-            
-            pdbID=df['PDB ID'].tolist()
-            #print(pdbID)
-            chains = df['Chain ID'].tolist()
-            uniprotID= df['UniProt ID'].tolist()
-            uniprotID.pop(0)
-            chains.pop(0)
-            chains_to_keep =  {}
-            to_keep= []
-            df_list= df.values.tolist()
-            to_keep.append(df_list[0])
-            print(df_list[0])
-            seen = []
-            pdbID.pop(0)
-            for element in pdbID:
-                if element not in seen:
-                    print(element)
-                    occurences = find_occurence(element,pdbID)
-                    print(len(occurences))
-                    copyocc = find_occurence(element,pdbID)
-                    if len(occurences)==1:
-                        to_keep.append(df_list[occurences[0]+1])
-                    else:
-                        for a in range(0,len(occurences)):
-                            for b in range(a+1,len(occurences)):
-                                idx=compare(occurences[a],occurences[b],df,pdbID,uniprotID,chains)
-                                if idx==occurences[a]:
-                                    if occurences[b] in copyocc:
-                                        copyocc.remove(occurences[b])
-                                elif idx==occurences[b]:
-                                    if occurences[a] in copyocc:
-                                        copyocc.remove(occurences[a])
-                        for x in copyocc:
-                            if df_list[x] not in to_keep:
-                                to_keep.append(df_list[x])
-                    seen.append(element)
+    #for filename in arr:
+    try:
+        print("start " + filename + "\n")
+        df1 = pd.read_excel(join(folderpath, filename))
+        #df.head(32)
+        names = ['PDB ID','HET code','Chain ID','Res. No.','Cosine value','p value','Aligned length','RMSD(Ca)','Protein Name','UniProt ID','UniRef50','EC No.','CATH code','SCOPe code','Aligned residues (Ca atoms)']
+        df = df1.drop_duplicates(subset = ['PDB ID', 'Chain ID']).reset_index(drop = True)
+        pdbID=df['PDB ID'].tolist()
+        #print(pdbID)
+        chains = df['Chain ID'].tolist()
+        uniprotID= df['UniProt ID'].tolist()
+        uniprotID.pop(0)
+        chains.pop(0)
+        chains_to_keep =  {}
+        to_keep= []
+        df_list= df.values.tolist()
+        to_keep.append(df_list[0])
+        print(df_list[0])
+        seen = []
+        pdbID.pop(0)
+        for element in pdbID:
+            if element not in seen:
+                print(element)
+                occurences = find_occurence(element,pdbID)
+                print(len(occurences))
+                copyocc = find_occurence(element,pdbID)
+                if len(occurences)==1:
+                    to_keep.append(df_list[occurences[0]+1])
                 else:
-                    print("already saw "+str(element))
+                    for a in range(0,len(occurences)):
+                        for b in range(a+1,len(occurences)):
+                            idx=compare(occurences[a],occurences[b],df,pdbID,uniprotID,chains)
+                            if idx==occurences[a]:
+                                if occurences[b] in copyocc:
+                                    copyocc.remove(occurences[b])
+                            elif idx==occurences[b]:
+                                if occurences[a] in copyocc:
+                                    copyocc.remove(occurences[a])
+                    for x in copyocc:
+                        if df_list[x] not in to_keep:
+                            to_keep.append(df_list[x])
+                seen.append(element)
+            else:
+                print("already saw "+str(element))
 
-            df0 = pd.DataFrame(to_keep)
-            names = ['PDB ID','HET code','Chain ID','Res. No.','Cosine value','p value','Aligned length','RMSD(Ca)','Protein Name','UniProt ID','UniRef50','EC No.','CATH code','SCOPe code','Aligned residues (Ca atoms)']
-            df0.columns=names
-            to_keep2 = []
-            df_list2= df0.values.tolist()
-            #print(df_list2[0])
-            #to_keep2.append(df_list2[0])
-            seen2 = []
-            uniprotID=df0['UniProt ID'].tolist()
-            
-            for element in uniprotID:
-                #print(element)
-                if element not in seen2:
-                    occurences = find_occurence(element,uniprotID)
-                    #print(len(occurences))
-                    copyocc = find_occurence(element,uniprotID)
-                    if len(occurences)==1:
-                        to_keep2.append(df_list2[occurences[0]])
-                    else:
-                        for a in range(0,len(occurences)):
-                            for b in range(a+1,len(occurences)):
-                                idx=compareuni(occurences[a],occurences[b],df0)
-                                #print("idx" + str(idx))
-                                if idx==occurences[a]:
-                                    if occurences[b] in copyocc:
-                                        copyocc.remove(occurences[b])
-                                elif idx==occurences[b]:
-                                    if occurences[a] in copyocc:
-                                        copyocc.remove(occurences[a])
-                        for x in copyocc:
-                            if df_list2[x] not in to_keep2:
-                                to_keep2.append(df_list2[x])
-                    seen2.append(element)
+        df0 = pd.DataFrame(to_keep)
+        names = ['PDB ID','HET code','Chain ID','Res. No.','Cosine value','p value','Aligned length','RMSD(Ca)','Protein Name','UniProt ID','UniRef50','EC No.','CATH code','SCOPe code','Aligned residues (Ca atoms)']
+        df0.columns=names
+        to_keep2 = []
+        df_list2= df0.values.tolist()
+        #print(df_list2[0])
+        #to_keep2.append(df_list2[0])
+        seen2 = []
+        uniprotID=df0['UniProt ID'].tolist()
+        
+        for element in uniprotID:
+            #print(element)
+            if element not in seen2:
+                occurences = find_occurence(element,uniprotID)
+                #print(len(occurences))
+                copyocc = find_occurence(element,uniprotID)
+                if len(occurences)==1:
+                    to_keep2.append(df_list2[occurences[0]])
                 else:
-                    print("already saw "+str(element))
-            #print(to_keep2)
-            
-            df_final = pd.DataFrame(to_keep2)
-            
-            df_final.columns=names
-            temp=[]
-            if(clean):
-               lst = df_final.values.tolist()
-               for k in lst:
-                   lig = k[1].strip(' \n')
-                   #print(lig)
-                   if lig in ligand:
-                       temp.append(k)
-            if(len(temp)>1):
-                df_final = pd.DataFrame(temp)
-                df_final.columns=names 
-            
+                    for a in range(0,len(occurences)):
+                        for b in range(a+1,len(occurences)):
+                            idx=compareuni(occurences[a],occurences[b],df0)
+                            #print("idx" + str(idx))
+                            if idx==occurences[a]:
+                                if occurences[b] in copyocc:
+                                    copyocc.remove(occurences[b])
+                            elif idx==occurences[b]:
+                                if occurences[a] in copyocc:
+                                    copyocc.remove(occurences[a])
+                    for x in copyocc:
+                        if df_list2[x] not in to_keep2:
+                            to_keep2.append(df_list2[x])
+                seen2.append(element)
+            else:
+                print("already saw "+str(element))
+        #print(to_keep2)
+        
+        df_final = pd.DataFrame(to_keep2)
+        
+        df_final.columns=names
+        temp=[]
+        if(clean):
+            lst = df_final.values.tolist()
+            for k in lst:
+                lig = k[1].strip(' \n')
+                #print(lig)
+                if lig in ligand:
+                    temp.append(k)
+        if(len(temp)>1):
+            df_final = pd.DataFrame(temp)
+            df_final.columns=names 
+        
 
-            df_final.to_excel(join(dest, filename))
-        except:
-            nonputs.append(filename)
-            print("Unexpected problem, while working with " + filename + ".xlsx!")
+        df_final.to_excel(join(dest, filename))
+        print("end " + filename + "\n")
+    except:
+        nonputs.append(filename)
+        print("Unexpected problem, while working with " + filename + ".xlsx!")
     return dest

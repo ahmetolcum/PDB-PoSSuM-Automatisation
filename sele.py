@@ -1,5 +1,6 @@
 ##import libraries 
 #from concurrent.futures import thread
+from multiprocessing import Pool
 import os
 from selenium import webdriver
 import time
@@ -290,11 +291,30 @@ def main():
     #ligand = ligandstr.split(",")
     #clean = True
     #concatfolder = folderconcat(exceldest)
-    destination = post_possum(destination, ligand, clean)
+    dest = destination+"/ResultFiles"
+    os.mkdir(dest)
+    
+    arr = [f for f in os.listdir(destination) if ((not f.startswith('.')) & (f.endswith(".xlsx")))]
+    lst = []
+    for i in arr:
+        lst.append((i,destination,ligand,clean))
+    p = Pool(6)
+    destination= p.starmap(post_possum,lst)
+    #destination = post_possum(destination, ligand, clean)
 
     #destination = "/Users/eceulutas/Desktop/pdbsum/PDB-PoSSuM-Automatisation/FOL/ExcelFiles/files"
     #destination = post_possum(destination, ligand, clean)
-    destination= align(destination)
+    dest = destination+"/AlignedResults"
+    
+    os.mkdir(dest)
+    '''except:
+        print("Folder exists will be overwritten: Aligned Result Files!")'''
+    arr = [f for f in os.listdir(destination) if ((not f.startswith('.')) & (f.endswith(".xlsx")))]
+    lst = []
+    for i in arr:
+        lst.append((i,destination))
+    p = Pool(6)
+    destination= p.starmap(align,lst)
     #print("now grouping")
     #grouping(exceldest)
 if __name__ == "__main__":
