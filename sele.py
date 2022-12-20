@@ -12,7 +12,7 @@ from concat import folderconcat
 from post_possum import post_possum
 from grouping import grouping
 from align import align
-from query_pdb import search_rcsb
+from query_pdb import caller
 
 def matrixchecker(High_RMSDs, protein):
     exist = False
@@ -278,6 +278,7 @@ def main():
     ligand, destination, clean, max_RMSD = inputtaker()
     headless = True
     #response = search_rcsb(ligand)
+    prodict = caller(ligand, prodict)
     prodict = PDBconnecter(destination, ligand, chromedriver, headless, prodict)
 
     resultless, High_RMSDs, destination = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
