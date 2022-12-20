@@ -49,8 +49,6 @@ def search_rcsb(ligand):
     "scoring_strategy": "combined"
   }
 }
-
-  # convert the dictionary to JSON format
   search_request = json.dumps(search_params)
 
   # send the search request to the RCSB search API
@@ -72,5 +70,17 @@ def search_rcsb(ligand):
   
   return identifiers
 
-response = search_rcsb("K")
-print(response)
+def caller(ligands, prodict):
+  numtotal = 0 
+  for ligand in ligands:
+    response = search_rcsb(ligand)
+    liste = []
+    if len(liste) == 0:
+        liste = response
+        for val in prodict.values():
+            for item in val:
+                if item in liste:
+                    liste.remove(item)
+        numtotal += len(liste)
+        prodict[ligand] = liste
+  return prodict
