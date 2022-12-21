@@ -293,6 +293,7 @@ def main():
         lst.append((i,destination,ligand,clean))
     p = Pool(6)
     destination= p.starmap(post_possum,lst)
+    destination = destination[0]
     dest = destination+"/AlignedResults"
     
     os.mkdir(dest)

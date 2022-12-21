@@ -198,7 +198,7 @@ def find_occurence(element,pdbID):
     return occurences
 
 def post_possum(filename,folderpath,ligand,clean):
-    dest = folderpath+"/ResultFiles2"
+    dest = folderpath+"/ResultFiles"
     arr = [f for f in os.listdir(folderpath) if not f.startswith('.')]#os.listdir(folderpath)
     #print(arr)
     folderpath = folderpath + "/"
