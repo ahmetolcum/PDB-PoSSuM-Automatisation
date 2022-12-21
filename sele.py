@@ -51,8 +51,6 @@ def inputtaker():
     while(inpligands == "" ):
         print("Wrong input format!")
         inpligands = input("Enter your ligand's three letter code: ")
-    if len(inpligands) == 1:
-        inpligands = inpligands + " "
     if(inpligands.find(",")):
         inpligands = inpligands.split(",")
         for element in inpligands:
@@ -173,6 +171,7 @@ def eliminator(destination, element, key, max_RMSD, prodict):
     return High_RMSDs
 def possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD):
     noresultlist = []
+    SomeErrorList = []
     destroot = destination
     High_RMSDs, High_RMSDs2 = [],[]
     if prodict:
@@ -183,90 +182,94 @@ def possumdownloader(ligand, prodict, destination, chromedriver, headless, max_R
         eliminates = []
         print("Estimation is calculating...")
         for key in prodict:
-            arr = [f for f in os.listdir(destination + "/" + key) if not f.startswith('.')]#os.listdir(folderpath)
-            for element in prodict[key]:
-                if(element+".txt" not in arr):
-                    #print(element)
-                    if len(element) == 4 :
-                        destination = destroot + "/" + key
-                        driver = chromesetter(chromedriver, destination, headless)
-                        driver.get("http://possum.cbrc.jp/PoSSuM/search_k.html")
-                        time.sleep(1)
-                        pdbid = driver.find_element(By.NAME,"params[0]")
-                        ligand_loc = driver.find_element(By.NAME,"params[1]")
-                        pdbid.send_keys(element)
-                        #print(key)
-                        ligand_loc.send_keys(key)
-                        download = driver.find_element(By.XPATH,"/html/body/div/div[2]/div[2]/form/table/tbody/tr[11]/td[2]/input[2]")
-                        download.click()
-                        time.sleep(0.5)
-                        submit = driver.find_element(By.NAME,"button")
-                        submit.click()
-                        time.sleep(0.5)
-                        done += 1
-                        namenotchanged = True
-                        secs = download_wait(destination)
-                        if namenotchanged:
+                arr = [f for f in os.listdir(destination + "/" + key) if not f.startswith('.')]#os.listdir(folderpath)
+                for element in prodict[key]:
+                    if(element+".txt" not in arr):
+                        #print(element)
+                        if len(element) == 4 :
                             try:
-                                if (destination +"/Report_PoSSuM.txt"):
-                                    filename = destination + "/" + element + ".txt"
-                                    os.rename(destination +"/Report_PoSSuM.txt", filename)
-                                    namenotchanged = False
-                            except:
-                                noresultlist.append(element)
-                                print("No any result for the " + element + "!")
-                        if not namenotchanged and max_RMSD != None:
-                            High_RMSDs += eliminator(destination, element, key, max_RMSD, prodict)
-                        #driver.close()
-                        if (len(High_RMSDs) != 0):
-                            #print(High_RMSDs)
-                            for item in High_RMSDs:
-                                #print(item)
                                 destination = destroot + "/" + key
                                 driver = chromesetter(chromedriver, destination, headless)
                                 driver.get("http://possum.cbrc.jp/PoSSuM/search_k.html")
                                 time.sleep(1)
                                 pdbid = driver.find_element(By.NAME,"params[0]")
                                 ligand_loc = driver.find_element(By.NAME,"params[1]")
-                                pdbid.send_keys(item[1])
-                                ligand_loc.send_keys(item[2])
+                                pdbid.send_keys(element)
+                                #print(key)
+                                ligand_loc.send_keys(key)
                                 download = driver.find_element(By.XPATH,"/html/body/div/div[2]/div[2]/form/table/tbody/tr[11]/td[2]/input[2]")
                                 download.click()
                                 time.sleep(0.5)
                                 submit = driver.find_element(By.NAME,"button")
                                 submit.click()
                                 time.sleep(0.5)
+                                done += 1
                                 namenotchanged = True
                                 secs = download_wait(destination)
-                                try:
-                                    if (destination +"/Report_PoSSuM.txt"):
-                                        #print(item[1])
-                                        filename = destination + "/" + item[1] + ".txt"
-                                        os.rename(destination +"/Report_PoSSuM.txt", filename)
-                                        namenotchanged = False
-                                except:
-                                    noresultlist.append(item)
-                                    print("No any result for the " + item[1] + "!")
+                                if namenotchanged:
+                                    try:
+                                        if (destination +"/Report_PoSSuM.txt"):
+                                            filename = destination + "/" + element + ".txt"
+                                            os.rename(destination +"/Report_PoSSuM.txt", filename)
+                                            namenotchanged = False
+                                    except:
+                                        noresultlist.append(element)
+                                        print("No any result for the " + element + "!")
                                 if not namenotchanged and max_RMSD != None:
-                                    High_RMSDs2 = eliminator(destination, item[1], key, max_RMSD, prodict)
-                else:
-                    done+=1    
-                High_RMSDs = []
-                eliminates += High_RMSDs2
-                numelement = allelementsindictionary(prodict)
-                #print(numelement)
-                percent = done * 100
-                percent = float(percent) / float(numelement)
-                print("{:.2f}".format(percent) ,"% completed! Download in progress...", )
-                if(percent > a):
-                    a = a + 5
-                    tic = time.time()
-                    remtime = tic - toc
-                    estimate = (100-percent) * remtime
-                    estimate = estimate / percent
-                    estimate = estimate / 60
-                    print(f"Estimated time to complete {estimate:0.4f} minutes")
-        print("Download completed!")         
+                                    High_RMSDs += eliminator(destination, element, key, max_RMSD, prodict)
+                                #driver.close()
+                                if (len(High_RMSDs) != 0):
+                                    #print(High_RMSDs)
+                                    for item in High_RMSDs:
+                                        #print(item)
+                                        destination = destroot + "/" + key
+                                        driver = chromesetter(chromedriver, destination, headless)
+                                        driver.get("http://possum.cbrc.jp/PoSSuM/search_k.html")
+                                        time.sleep(1)
+                                        pdbid = driver.find_element(By.NAME,"params[0]")
+                                        ligand_loc = driver.find_element(By.NAME,"params[1]")
+                                        pdbid.send_keys(item[1])
+                                        ligand_loc.send_keys(item[2])
+                                        download = driver.find_element(By.XPATH,"/html/body/div/div[2]/div[2]/form/table/tbody/tr[11]/td[2]/input[2]")
+                                        download.click()
+                                        time.sleep(0.5)
+                                        submit = driver.find_element(By.NAME,"button")
+                                        submit.click()
+                                        time.sleep(0.5)
+                                        namenotchanged = True
+                                        secs = download_wait(destination)
+                                        try:
+                                            if (destination +"/Report_PoSSuM.txt"):
+                                                #print(item[1])
+                                                filename = destination + "/" + item[1] + ".txt"
+                                                os.rename(destination +"/Report_PoSSuM.txt", filename)
+                                                namenotchanged = False
+                                        except:
+                                            noresultlist.append(item)
+                                            print("No any result for the " + item[1] + "!")
+                                        if not namenotchanged and max_RMSD != None:
+                                            High_RMSDs2 = eliminator(destination, item[1], key, max_RMSD, prodict)
+                            except:
+                                SomeErrorList.append(key+ ":" +element)
+                    else:
+                        done+=1    
+                    High_RMSDs = []
+                    eliminates += High_RMSDs2
+                    numelement = allelementsindictionary(prodict)
+                    #print(numelement)
+                    percent = done * 100
+                    percent = float(percent) / float(numelement)
+                    print("{:.2f}".format(percent) ,"% completed! Download in progress...", )
+                    if(percent > a):
+                        a = a + 5
+                        tic = time.time()
+                        remtime = tic - toc
+                        estimate = (100-percent) * remtime
+                        estimate = estimate / percent
+                        estimate = estimate / 60
+                        print(f"Estimated time to complete {estimate:0.4f} minutes")
+        print("Download completed!")
+        print(SomeErrorList)         
     driver.close()
     return noresultlist, High_RMSDs2, destination
 def main():
@@ -275,36 +278,25 @@ def main():
     prodict = {}
     resultless, lenlist = [], []
     clean = False
-    ligand, destination, clean, max_RMSD = inputtaker()
+    #ligand, destination, clean, max_RMSD = inputtaker()
     headless = True
-    #response = search_rcsb(ligand)
-    prodict = caller(ligand, prodict)
-    prodict = PDBconnecter(destination, ligand, chromedriver, headless, prodict)
-
-    resultless, High_RMSDs, destination = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
-    
-    
-    #print(High_RMSDs)
-    #destination = "/Users/ahmetolcum/Downloads/PDBSUM/COA"
-    destination = txttoexcel(destination)
-    #destination = "/Users/ahmetolcum/Downloads/PDBSUM/COA/ExcelFiles"
-    #ligandstr = "COA"
-    #ligand = ligandstr.split(",")
-    #clean = True
-    #concatfolder = folderconcat(exceldest)
-    dest = destination+"/ResultFiles"
+    #prodict = caller(ligand, prodict)
+    ###prodict = PDBconnecter(destination, ligand, chromedriver, headless, prodict)
+    #resultless, High_RMSDs, destination = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
+    #destination = txttoexcel(destination)
+    #dest = destination+"/ResultFiles"
+    destination = "/Users/ahmetolcum/Documents/Sabanci/PURE/PDB-PoSSuM-Automatisation/K/ExcelFiles"
+    dest = "/Users/ahmetolcum/Documents/Sabanci/PURE/PDB-PoSSuM-Automatisation/K/ExcelFiles/ResultFiles"
+    ligand = "K"
     os.mkdir(dest)
-    
     arr = [f for f in os.listdir(destination) if ((not f.startswith('.')) & (f.endswith(".xlsx")))]
     lst = []
     for i in arr:
         lst.append((i,destination,ligand,clean))
     p = Pool(6)
     destination= p.starmap(post_possum,lst)
-    #destination = post_possum(destination, ligand, clean)
-
-    #destination = "/Users/eceulutas/Desktop/pdbsum/PDB-PoSSuM-Automatisation/FOL/ExcelFiles/files"
-    #destination = post_possum(destination, ligand, clean)
+    ####destination = post_possum(destination, ligand, clean)
+    ####destination = post_possum(destination, ligand, clean)
     dest = destination+"/AlignedResults"
     
     os.mkdir(dest)
@@ -323,5 +315,5 @@ if __name__ == "__main__":
 
 ############PROBLEMS TO FIX##############
 """
-Align.py does not a return any file. 
+
 """

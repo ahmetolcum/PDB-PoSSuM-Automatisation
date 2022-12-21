@@ -73,7 +73,13 @@ def search_rcsb(ligand):
 def caller(ligands, prodict):
   numtotal = 0 
   for ligand in ligands:
-    response = search_rcsb(ligand)
+    ligand_temp = ligand
+    if ligand_temp.find(" ") != -1:
+      if ligand_temp[len(ligand_temp) - 1] == " ":
+        ligand_temp = ligand_temp[0:len(ligand_temp) - 1]
+      else:
+        ligand_temp = ligand_temp[ligand_temp.find(' ') + 1 :]
+    response = search_rcsb(ligand_temp)
     liste = []
     if len(liste) == 0:
         liste = response
@@ -82,5 +88,6 @@ def caller(ligands, prodict):
                 if item in liste:
                     liste.remove(item)
         numtotal += len(liste)
-        prodict[ligand] = liste
+        prodict[ligand_temp] = liste
+  print(prodict)
   return prodict
