@@ -34,7 +34,7 @@ def findseq(id,chain):
   return seq
 
 def align(item,folderpath):
-    dest = folderpath+"/Aligned2"
+    dest = folderpath+"/AlignedResults"
     #arr = [f for f in os.listdir(folderpath) if ((not f.startswith('.')) & (f.endswith(".xlsx")))]#os.listdir(folderpath)
     notfound = []
     '''try:
