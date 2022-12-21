@@ -275,19 +275,17 @@ def possumdownloader(ligand, prodict, destination, chromedriver, headless, max_R
 def main():
     #The desired directory needed to be changed. Destination can be found in inputtaker function 
     chromedriver = "/Users/ahmetolcum/Documents/DevSpace/Selenium/chromedriver" #Give the path of the chrome driver for the selenium 
-    prodict = {}
+    prodict = {} 
     resultless, lenlist = [], []
     clean = False
-    #ligand, destination, clean, max_RMSD = inputtaker()
+    ligand, destination, clean, max_RMSD = inputtaker()
     headless = True
-    #prodict = caller(ligand, prodict)
+    prodict = caller(ligand, prodict)
+    ###For using selenium not PDB API 
     ###prodict = PDBconnecter(destination, ligand, chromedriver, headless, prodict)
-    #resultless, High_RMSDs, destination = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
-    #destination = txttoexcel(destination)
-    #dest = destination+"/ResultFiles"
-    destination = "/Users/ahmetolcum/Documents/Sabanci/PURE/PDB-PoSSuM-Automatisation/K/ExcelFiles"
-    dest = "/Users/ahmetolcum/Documents/Sabanci/PURE/PDB-PoSSuM-Automatisation/K/ExcelFiles/ResultFiles"
-    ligand = "K"
+    resultless, High_RMSDs, destination = possumdownloader(ligand, prodict, destination, chromedriver, headless, max_RMSD)
+    destination = txttoexcel(destination)
+    dest = destination+"/ResultFiles"
     os.mkdir(dest)
     arr = [f for f in os.listdir(destination) if ((not f.startswith('.')) & (f.endswith(".xlsx")))]
     lst = []
@@ -295,8 +293,6 @@ def main():
         lst.append((i,destination,ligand,clean))
     p = Pool(6)
     destination= p.starmap(post_possum,lst)
-    ####destination = post_possum(destination, ligand, clean)
-    ####destination = post_possum(destination, ligand, clean)
     dest = destination+"/AlignedResults"
     
     os.mkdir(dest)
@@ -308,8 +304,6 @@ def main():
         lst.append((i,destination))
     p = Pool(6)
     destination= p.starmap(align,lst)
-    #print("now grouping")
-    #grouping(exceldest)
 if __name__ == "__main__":
     main()
 
